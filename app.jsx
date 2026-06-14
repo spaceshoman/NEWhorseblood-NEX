@@ -10,15 +10,16 @@ function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [tab, setTab] = React.useState("home");
   const [raceOpen, setRaceOpen] = React.useState(false);
+  const [raceView, setRaceView] = React.useState("diag");
 
   const tone = window.KB_TONES[t.tone] || window.KB_TONES.classic;
 
-  const openRace = (id) => { setRaceOpen(true); window.scrollTo(0, 0); };
+  const openRace = (id, view) => { setRaceOpen(true); setRaceView(view || "diag"); window.scrollTo(0, 0); };
   const backHome = () => { setRaceOpen(false); window.scrollTo(0, 0); };
   const goTab = (id) => { setTab(id); setRaceOpen(false); window.scrollTo(0, 0); };
 
   let screen;
-  if (tab === "home") screen = raceOpen ? <RaceDetail t={t} onBack={backHome} /> : <HomeScreenWrap onOpenRace={openRace} />;
+  if (tab === "home") screen = raceOpen ? <RaceDetail t={t} onBack={backHome} initialView={raceView} /> : <HomeScreenWrap onOpenRace={openRace} />;
   else if (tab === "analysis") screen = <AnalysisScreen t={t} />;
   else if (tab === "db") screen = <DBScreen />;
   else if (tab === "betting") screen = <BettingScreen />;

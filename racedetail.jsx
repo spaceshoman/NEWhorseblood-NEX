@@ -3,9 +3,9 @@
 const scoreTierColor = (s) =>
   s >= 85 ? "var(--gold-bright)" : s >= 70 ? "var(--gold)" : s >= 55 ? "#cf9a5a" : "var(--txt3)";
 
-const RaceDetail = ({ t, onBack }) => {
+const RaceDetail = ({ t, onBack, initialView }) => {
   const { race } = window.KB;
-  const [view, setView] = React.useState("diag"); // diag | list | review
+  const [view, setView] = React.useState(initialView || "diag"); // diag | list | review
   return (
     <div>
       <Header title={race.short} sub={race.en} onBack={onBack} />

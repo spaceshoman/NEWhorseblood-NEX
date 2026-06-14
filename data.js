@@ -30,6 +30,22 @@ window.KB = (function () {
     emoji: "🌟",
   };
 
+  // 次走G1（ホームNEXT RACE予告用）— データ準備中
+  const nextRace = {
+    grade: "G1",
+    name: "スプリンターズステークス",
+    short: "スプリンターズS",
+    en: "SPRINTERS STAKES",
+    date: "2026.9.27",
+    dow: "日",
+    venue: "中山",
+    course: "芝1200m",
+    post: "15:40",
+    emoji: "💨",
+    tagline: "秋のスプリント王決定戦",
+    note: "出馬表確定までデータ準備中",
+  };
+
   // 出走馬（実データ）
   const runners = [
     { num: 1, frame: 1, name: "ダノンデサイル", sire: "エピファネイア", bms: "Congrats", jockey: "戸崎圭太", age: 5, sex: "牡", pop: 5, tan: 7.6, style: "差し", win: "日本ダービー" },
@@ -266,7 +282,8 @@ window.KB = (function () {
 
   // 重賞カレンダー（予想ホーム用）
   const calendar = [
-    { id: "takarazuka2026", grade: "G1", name: "宝塚記念", date: "6.14", dow: "日", venue: "阪神", course: "芝2200m", emoji: "🌟", status: "live", field: 18 },
+    { id: "sprinters2026", grade: "G1", name: "スプリンターズS", date: "9.27", dow: "日", venue: "中山", course: "芝1200m", emoji: "💨", status: "soon", note: "秋の短距離王決定戦", field: 0 },
+    { id: "takarazuka2026", grade: "G1", name: "宝塚記念", date: "6.14", dow: "日", venue: "阪神", course: "芝2200m", emoji: "🌟", status: "done", win: "メイショウタバル" },
     { id: "yasuda2026", grade: "G1", name: "安田記念", date: "6.7", dow: "日", venue: "東京", course: "芝1600m", emoji: "⚡", status: "done", win: "ソウルラッシュ" },
     { id: "epsom2026", grade: "G3", name: "エプソムC", date: "6.7", dow: "日", venue: "東京", course: "芝1800m", emoji: "🎩", status: "done", win: "レーベンスティール" },
     { id: "naruo2026", grade: "G3", name: "鳴尾記念", date: "6.7", dow: "日", venue: "阪神", course: "芝2000m", emoji: "🌾", status: "done", win: "ヨーホーレイク" },
@@ -328,5 +345,5 @@ window.KB = (function () {
   result.order.forEach((o) => (posByNum[o.num] = o.pos));
   result.posByNum = posByNum;
 
-  return { race, runners, diag, diagByNum, byNum, betting, trends, stallions, lineColors, calendar, FRAME, bias, sim, overall, strategy, result };
+  return { race, nextRace, runners, diag, diagByNum, byNum, betting, trends, stallions, lineColors, calendar, FRAME, bias, sim, overall, strategy, result };
 })();
