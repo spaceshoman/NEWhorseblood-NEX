@@ -1,5 +1,5 @@
-/* 血統くん PWA service worker */
-const CACHE = "keitokun-v1";
+/* 血統くん PWA service worker — network-first(更新優先) */
+const CACHE = "keitokun-v2";
 const ASSETS = [
   ".", "index.html", "血統くん.html", "manifest.json",
   "data.js", "theme.js", "tweaks-panel.jsx", "ui.jsx", "home.jsx",
@@ -10,19 +10,20 @@ const ASSETS = [
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).catch(() => {}));
-  self.skipWaiting();
+  self.skipWaiting(); // 新SWを即時有効化
 });
 
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
   );
-  self.clients.claim();
+  self.clients.claim(); // 既存タブもすぐ新SW管理下へ
 });
 
+// network-first: まず最新を取得し、成功したらキャッシュ更新。失敗時のみキャッシュ。
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
-  if (url.origin !== location.origin) return; // CDN(React/Babel/Fonts)はそのまま通す
+  if (url.origin !== location.origin) return; // CDNはそのまま
   e.respondWith(
     fetch(e.request)
       .then((res) => {
