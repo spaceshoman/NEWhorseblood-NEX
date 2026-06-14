@@ -277,5 +277,56 @@ window.KB = (function () {
     { id: "spring2026", grade: "G2", name: "函館記念", date: "7.19", dow: "日", venue: "函館", course: "芝2000m", emoji: "🦀", status: "soon", field: 0 },
   ];
 
-  return { race, runners, diag, diagByNum, byNum, betting, trends, stallions, lineColors, calendar, FRAME, bias, sim, overall, strategy };
+  /* ===== レース結果・回顧・AI検証（確定後の実データ）===== */
+  const result = {
+    decided: true,
+    track: "重", weather: "雨", time: "2:12.1", last3f: "35.6",
+    // 着順（中止含む）: pos, num, time(上位のみ), margin(着差)
+    order: [
+      { pos: 1, num: 16, time: "2:12.1", margin: "" },
+      { pos: 2, num: 5, time: "2:12.2", margin: "クビ" },
+      { pos: 3, num: 1, time: "2:12.6", margin: "2½" },
+      { pos: 4, num: 9, margin: "アタマ" },
+      { pos: 5, num: 8, margin: "5" },
+      { pos: 6, num: 7, margin: "ハナ" },
+      { pos: 7, num: 17, margin: "1" },
+      { pos: 8, num: 10, margin: "クビ" },
+      { pos: 9, num: 2, margin: "アタマ" },
+      { pos: 10, num: 12, margin: "クビ" },
+      { pos: 11, num: 11, margin: "2½" },
+      { pos: 12, num: 4, margin: "2" },
+      { pos: 13, num: 14, margin: "1¾" },
+      { pos: 14, num: 13, margin: "¾" },
+      { pos: 15, num: 6, margin: "1½" },
+      { pos: 16, num: 18, margin: "クビ" },
+      { pos: 17, num: 3, margin: "¾" },
+      { pos: "中止", num: 15, margin: "" },
+    ],
+    payout: [
+      { k: "単勝", c: "⑯", v: 390 },
+      { k: "馬連", c: "⑤-⑯", v: 620 },
+      { k: "馬単", c: "⑯-⑤", v: 1360 },
+      { k: "ワイド", c: "⑤-⑯", v: 260 },
+      { k: "3連複", c: "①⑤⑯", v: 1230 },
+      { k: "3連単", c: "⑯⑤①", v: 6040 },
+    ],
+    comment: {
+      by: "武豊", horse: "メイショウタバル",
+      text: "（レース直前の雨は）嫌な気持ちではなかったですね。天国から松本会長が降らしてくれたのかな。2番手で馬も我慢してくれて、いいリズムで走ってくれました。今日は今までで一番馬の強さを感じましたし、これで秋には胸を張ってフランスに行けます",
+    },
+    review:
+      "直前の雨で馬場は重まで悪化。道中も12秒台が続くタフな消耗戦となり、瞬発力ではなく地力と馬場適性が問われた。逃げたコスモキュランダを見ながら2番手で折り合ったメイショウタバルが4角で早めに先頭をうかがい押し切り勝ち。クロワデュノールは中団から差を詰めたがクビ差届かず2着。重馬場と前残りの展開がわずかにタバル向きだった。3着は人気薄ダノンデサイルが後方から伸び、3連複①⑤⑯は1番人気の堅い決着。AIが軽視した追込勢（②⑰）は伸びを欠き、馬場傾向の読みがそのまま結果に直結した。",
+    // 買い目の収支検証（diag/strategy由来の3プランを答え合わせ）
+    bets: [
+      { plan: "A", label: "本命 馬連", kind: "gold", nums: "◎5 → 16・17・1・13", invest: 2000, ret: 3100, hit: true, note: "5-16 620円" },
+      { plan: "B", label: "3連複 F", kind: "default", nums: "5 ‐ 16,17 ‐ 1,13,15,6", invest: 2400, ret: 3690, hit: true, note: "1-5-16 1,230円" },
+      { plan: "C", label: "ヒモ穴 ワイド", kind: "default", nums: "★13 ‐ 5・16・17", invest: 1200, ret: 0, hit: false, note: "★13は14着" },
+    ],
+  };
+  // 着順を num から引けるように
+  const posByNum = {};
+  result.order.forEach((o) => (posByNum[o.num] = o.pos));
+  result.posByNum = posByNum;
+
+  return { race, runners, diag, diagByNum, byNum, betting, trends, stallions, lineColors, calendar, FRAME, bias, sim, overall, strategy, result };
 })();

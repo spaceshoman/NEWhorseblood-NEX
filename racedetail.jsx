@@ -5,7 +5,7 @@ const scoreTierColor = (s) =>
 
 const RaceDetail = ({ t, onBack }) => {
   const { race } = window.KB;
-  const [view, setView] = React.useState("diag"); // list | diag
+  const [view, setView] = React.useState("diag"); // diag | list | review
   return (
     <div>
       <Header title={race.short} sub={race.en} onBack={onBack} />
@@ -25,12 +25,12 @@ const RaceDetail = ({ t, onBack }) => {
 
       {/* ビュー切替 */}
       <div style={{ display: "flex", gap: 4, margin: "16px 16px 0", padding: 3, background: "var(--surface)", border: "1px solid var(--line2)", borderRadius: "var(--radius)" }}>
-        {[["diag", "🔮 AI血統診断"], ["list", "📋 出馬表"]].map(([id, label]) => {
+        {[["diag", "🔮 AI診断"], ["list", "📋 出馬表"], ["review", "🏁 結果・回顧"]].map(([id, label]) => {
           const on = view === id;
           return (
             <button key={id} onClick={() => setView(id)} style={{
               flex: 1, padding: "10px 0", border: "none", borderRadius: "calc(var(--radius) - 3px)", cursor: "pointer",
-              fontFamily: "var(--display)", fontWeight: 700, fontSize: 13.5,
+              fontFamily: "var(--display)", fontWeight: 700, fontSize: 12.5, whiteSpace: "nowrap",
               background: on ? "var(--gold-grad)" : "transparent", color: on ? "#15120a" : "var(--txt2)",
               boxShadow: on ? "var(--glow)" : "none", transition: "all .2s",
             }}>{label}</button>
@@ -38,7 +38,7 @@ const RaceDetail = ({ t, onBack }) => {
         })}
       </div>
 
-      {view === "list" ? <EntryTable /> : <Diagnosis t={t} />}
+      {view === "list" ? <EntryTable /> : view === "review" ? <ResultPanel /> : <Diagnosis t={t} />}
     </div>
   );
 };
