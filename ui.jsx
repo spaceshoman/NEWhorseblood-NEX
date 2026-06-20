@@ -135,6 +135,7 @@ const Header = ({ title, sub, onBack, right }) => (
 const BottomNav = ({ tab, onTab }) => {
   const items = [
     { id: "home", emoji: "🏇", label: "予想" },
+    { id: "win5", emoji: "🎰", label: "WIN5" },
     { id: "analysis", emoji: "📊", label: "分析" },
     { id: "db", emoji: "🧬", label: "血統DB" },
     { id: "betting", emoji: "🎯", label: "馬券" },

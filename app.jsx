@@ -21,12 +21,21 @@ function App() {
   // JSON駆動のレース(race-loader.jsで読み込み)
   const JSON_RACES = ["shirasagiS2026", "fuchuFillies2026"];
 
+  // WIN5タブからレース詳細を開けるように、tabを切り替えてからopenRace
+  const openRaceFromWin5 = (id, view) => {
+    setTab("home");
+    setRaceOpen(id || "takarazuka2026");
+    setRaceView(view || "diag");
+    window.scrollTo(0, 0);
+  };
+
   let screen;
   if (tab === "home") {
     if (raceOpen && JSON_RACES.includes(raceOpen)) screen = <JsonRaceDetail raceId={raceOpen} onBack={backHome} />;
     else if (raceOpen) screen = <RaceDetail t={t} onBack={backHome} initialView={raceView} />;
     else screen = <HomeScreenWrap onOpenRace={openRace} />;
   }
+  else if (tab === "win5") screen = <Win5Screen onOpenRace={openRaceFromWin5} />;
   else if (tab === "analysis") screen = <AnalysisScreen t={t} />;
   else if (tab === "db") screen = <DBScreen />;
   else if (tab === "betting") screen = <BettingScreen />;
