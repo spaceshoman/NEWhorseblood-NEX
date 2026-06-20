@@ -30,21 +30,41 @@ window.KB = (function () {
     emoji: "🌟",
   };
 
-  // 次走G1（ホームNEXT RACE予告用）— データ準備中
-  const nextRace = {
-    grade: "G1",
-    name: "スプリンターズステークス",
-    short: "スプリンターズS",
-    en: "SPRINTERS STAKES",
-    date: "2026.9.27",
-    dow: "日",
-    venue: "中山",
-    course: "芝1200m",
-    post: "15:40",
-    emoji: "💨",
-    tagline: "秋のスプリント王決定戦",
-    note: "出馬表確定までデータ準備中",
-  };
+  // 次走（ホームNEXT RACE 用）— 明日(6/21) 2レース同日開催
+  const nextRaces = [
+    {
+      id: "shirasagiS2026",
+      grade: "G3",
+      name: "第2回 しらさぎステークス",
+      short: "しらさぎS",
+      en: "SHIRASAGI STAKES",
+      date: "2026.6.21",
+      dow: "日",
+      venue: "阪神",
+      course: "芝1600m",
+      post: "15:30",
+      emoji: "🦢",
+      tagline: "サマーマイルシリーズ初戦",
+      isLive: true,
+    },
+    {
+      id: "fuchuFillies2026",
+      grade: "G2",
+      name: "第74回 府中牝馬ステークス",
+      short: "府中牝馬S",
+      en: "FUCHU HIMBA S",
+      date: "2026.6.21",
+      dow: "日",
+      venue: "東京",
+      course: "芝1800m",
+      post: "15:45",
+      emoji: "🌸",
+      tagline: "牝馬限定の重要トライアル",
+      isLive: true,
+    },
+  ];
+  // 旧API互換：nextRace は先頭（しらさぎS）
+  const nextRace = nextRaces[0];
 
   // 出走馬（実データ）
   const runners = [
@@ -282,6 +302,8 @@ window.KB = (function () {
 
   // 重賞カレンダー（予想ホーム用）
   const calendar = [
+    { id: "shirasagiS2026", grade: "G3", name: "しらさぎS", date: "6.21", dow: "日", venue: "阪神", course: "芝1600m", emoji: "🦢", status: "live", note: "サマーマイルシリーズ初戦", field: 18 },
+    { id: "fuchuFillies2026", grade: "G2", name: "府中牝馬S", date: "6.21", dow: "日", venue: "東京", course: "芝1800m", emoji: "🌸", status: "live", note: "牝馬限定G2", field: 16 },
     { id: "sprinters2026", grade: "G1", name: "スプリンターズS", date: "9.27", dow: "日", venue: "中山", course: "芝1200m", emoji: "💨", status: "soon", note: "秋の短距離王決定戦", field: 0 },
     { id: "takarazuka2026", grade: "G1", name: "宝塚記念", date: "6.14", dow: "日", venue: "阪神", course: "芝2200m", emoji: "🌟", status: "done", win: "メイショウタバル" },
     { id: "yasuda2026", grade: "G1", name: "安田記念", date: "6.7", dow: "日", venue: "東京", course: "芝1600m", emoji: "⚡", status: "done", win: "ソウルラッシュ" },
@@ -345,5 +367,5 @@ window.KB = (function () {
   result.order.forEach((o) => (posByNum[o.num] = o.pos));
   result.posByNum = posByNum;
 
-  return { race, nextRace, runners, diag, diagByNum, byNum, betting, trends, stallions, lineColors, calendar, FRAME, bias, sim, overall, strategy, result };
+  return { race, nextRace, nextRaces, runners, diag, diagByNum, byNum, betting, trends, stallions, lineColors, calendar, FRAME, bias, sim, overall, strategy, result };
 })();

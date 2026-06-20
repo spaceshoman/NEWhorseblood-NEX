@@ -1,7 +1,10 @@
 /* ===== 血統くん refined — 予想ホーム ===== */
 
 const HomeScreen = ({ onOpenRace }) => {
-  const { race, nextRace, calendar } = window.KB;
+  const { race, nextRace, nextRaces, calendar } = window.KB;
+  const racesArr = nextRaces || [nextRace];
+  const main = racesArr[0];
+  const sub = racesArr[1] || null;
   const [grade, setGrade] = React.useState("ALL");
   const grades = ["ALL", "G1", "G2", "G3"];
   const list = calendar.filter((c) => grade === "ALL" || c.grade === grade);
@@ -11,8 +14,8 @@ const HomeScreen = ({ onOpenRace }) => {
 
   return (
     <div style={{ paddingBottom: 24 }}>
-      {/* NEXT RACE ヒーロー（次走予告 → タップで宝塚記念の結果・回顧） */}
-      <div onClick={() => onOpenRace(race.id, "review")} style={{
+      {/* NEXT RACE ヒーロー（メイン） */}
+      <div onClick={() => onOpenRace(main.id, "diag")} style={{
         margin: "14px 14px 0", borderRadius: "var(--radius-lg)", padding: "20px 18px 18px",
         background: "var(--hero)", border: "1px solid var(--line)", position: "relative", overflow: "hidden",
         cursor: "pointer", boxShadow: "var(--glow)",
@@ -20,29 +23,51 @@ const HomeScreen = ({ onOpenRace }) => {
         <div style={{ position: "absolute", inset: 0, borderRadius: "var(--radius-lg)", border: "1px solid rgba(255,255,255,0.04)", pointerEvents: "none" }} />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontFamily: "var(--num)", fontSize: 11, letterSpacing: "4px", color: "var(--gold)", fontWeight: 400 }}>NEXT RACE</span>
-          <Pill kind="ghost" style={{ fontSize: 9.5 }}>近日</Pill>
+          <Pill kind="pos" style={{ fontSize: 9.5 }}>● 予想公開中</Pill>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12 }}>
-          <GradeBadge grade={nextRace.grade} />
-          <span style={{ fontSize: 11, color: "var(--txt3)", fontFamily: "var(--num)", letterSpacing: "1px" }}>{nextRace.date}（{nextRace.dow}）{nextRace.venue}</span>
+          <GradeBadge grade={main.grade} />
+          <span style={{ fontSize: 11, color: "var(--txt3)", fontFamily: "var(--num)", letterSpacing: "1px" }}>{main.date}（{main.dow}）{main.venue}</span>
         </div>
         <div style={{ fontFamily: "var(--display)", fontWeight: 900, fontSize: 34, color: "var(--txt)", letterSpacing: "1.5px", marginTop: 6, lineHeight: 1.1 }}>
-          {nextRace.emoji} {nextRace.short}
+          {main.emoji} {main.short}
         </div>
-        <div style={{ fontFamily: "var(--num)", fontSize: 12, letterSpacing: "2px", color: "var(--gold)", opacity: 0.8, marginTop: 4 }}>{nextRace.en}</div>
-        <div style={{ fontSize: 10.5, color: "var(--txt2)", marginTop: 8 }}>{nextRace.tagline} ・ {nextRace.note}</div>
+        <div style={{ fontFamily: "var(--num)", fontSize: 12, letterSpacing: "2px", color: "var(--gold)", opacity: 0.8, marginTop: 4 }}>{main.en}</div>
+        <div style={{ fontSize: 10.5, color: "var(--txt2)", marginTop: 8 }}>{main.tagline}</div>
         <div style={{ display: "flex", gap: 14, marginTop: 14, alignItems: "center" }}>
-          {[["コース", nextRace.course], ["発走", nextRace.post]].map(([k, v]) => (
+          {[["コース", main.course], ["発走", main.post]].map(([k, v]) => (
             <div key={k}>
               <div style={{ fontSize: 9, color: "var(--txt3)", letterSpacing: "1px" }}>{k}</div>
               <div style={{ fontSize: 13, color: "var(--txt)", fontWeight: 700, marginTop: 2 }}>{v}</div>
             </div>
           ))}
           <div style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 6, color: "var(--gold)", fontSize: 12, fontWeight: 700 }}>
-            宝塚記念の回顧 <span style={{ fontSize: 15 }}>›</span>
+            AI診断を見る <span style={{ fontSize: 15 }}>›</span>
           </div>
         </div>
       </div>
+
+      {/* 同日開催のサブレース */}
+      {sub && (
+        <div onClick={() => onOpenRace(sub.id, "diag")} style={{
+          margin: "10px 14px 0", borderRadius: "var(--radius)", padding: "12px 14px",
+          background: "var(--surface)", border: "1px solid var(--line)", cursor: "pointer",
+          display: "flex", alignItems: "center", gap: 10,
+        }}>
+          <div style={{ fontFamily: "var(--num)", fontSize: 10, letterSpacing: "2.5px", color: "var(--gold)", writingMode: "vertical-rl", textOrientation: "mixed" }}>SAME&nbsp;DAY</div>
+          <div style={{ width: 1, height: 32, background: "var(--line2)" }} />
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <GradeBadge grade={sub.grade} small />
+              <span style={{ fontFamily: "var(--display)", fontSize: 15, fontWeight: 800, color: "var(--txt)" }}>{sub.emoji} {sub.short}</span>
+            </div>
+            <div style={{ fontSize: 10, color: "var(--txt3)", marginTop: 3 }}>
+              {sub.venue} ・ {sub.course} ・ 発走{sub.post} ・ {sub.tagline}
+            </div>
+          </div>
+          <span style={{ color: "var(--gold)", fontSize: 18 }}>›</span>
+        </div>
+      )}
 
       {/* 3つの目 予告 */}
       <div style={{ display: "flex", gap: 8, margin: "12px 14px 0" }}>
@@ -93,12 +118,17 @@ const RowLabel = ({ text }) => (
 const RaceRow = ({ c, onOpenRace }) => {
   const live = c.status === "live";
   const done = c.status === "done";
+  const clickable = live || done;
+  const onClick = () => {
+    if (live) onOpenRace(c.id, "diag");
+    else if (done) onOpenRace(c.id, "review");
+  };
   return (
-    <div onClick={() => live && onOpenRace(c.id)} style={{
+    <div onClick={clickable ? onClick : undefined} style={{
       display: "flex", alignItems: "center", gap: 12, padding: "13px 14px",
       background: live ? "var(--surface)" : "transparent",
       border: `1px solid ${live ? "var(--line)" : "var(--line2)"}`,
-      borderRadius: "var(--radius)", cursor: live ? "pointer" : "default", opacity: done ? 0.6 : 1,
+      borderRadius: "var(--radius)", cursor: clickable ? "pointer" : "default", opacity: done ? 0.78 : 1,
     }}>
       <div style={{ textAlign: "center", width: 38, flexShrink: 0 }}>
         <div style={{ fontFamily: "var(--num)", fontSize: 18, color: "var(--gold)", lineHeight: 1 }}>{c.date}</div>
@@ -115,7 +145,7 @@ const RaceRow = ({ c, onOpenRace }) => {
         </div>
       </div>
       {live ? <span style={{ color: "var(--gold)", fontSize: 18 }}>›</span> :
-        done ? <Pill kind="ghost" style={{ fontSize: 9 }}>結果</Pill> :
+        done ? <Pill kind="gold" style={{ fontSize: 9 }}>回顧 ›</Pill> :
           <Pill kind="ghost" style={{ fontSize: 9 }}>予定</Pill>}
     </div>
   );

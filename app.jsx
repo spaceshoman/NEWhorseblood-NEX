@@ -9,17 +9,24 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/ {
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [tab, setTab] = React.useState("home");
-  const [raceOpen, setRaceOpen] = React.useState(false);
+  const [raceOpen, setRaceOpen] = React.useState(null); // null | レースID
   const [raceView, setRaceView] = React.useState("diag");
 
   const tone = window.KB_TONES[t.tone] || window.KB_TONES.classic;
 
-  const openRace = (id, view) => { setRaceOpen(true); setRaceView(view || "diag"); window.scrollTo(0, 0); };
-  const backHome = () => { setRaceOpen(false); window.scrollTo(0, 0); };
-  const goTab = (id) => { setTab(id); setRaceOpen(false); window.scrollTo(0, 0); };
+  const openRace = (id, view) => { setRaceOpen(id || "takarazuka2026"); setRaceView(view || "diag"); window.scrollTo(0, 0); };
+  const backHome = () => { setRaceOpen(null); window.scrollTo(0, 0); };
+  const goTab = (id) => { setTab(id); setRaceOpen(null); window.scrollTo(0, 0); };
+
+  // JSON駆動のレース(race-loader.jsで読み込み)
+  const JSON_RACES = ["shirasagiS2026", "fuchuFillies2026"];
 
   let screen;
-  if (tab === "home") screen = raceOpen ? <RaceDetail t={t} onBack={backHome} initialView={raceView} /> : <HomeScreenWrap onOpenRace={openRace} />;
+  if (tab === "home") {
+    if (raceOpen && JSON_RACES.includes(raceOpen)) screen = <JsonRaceDetail raceId={raceOpen} onBack={backHome} />;
+    else if (raceOpen) screen = <RaceDetail t={t} onBack={backHome} initialView={raceView} />;
+    else screen = <HomeScreenWrap onOpenRace={openRace} />;
+  }
   else if (tab === "analysis") screen = <AnalysisScreen t={t} />;
   else if (tab === "db") screen = <DBScreen />;
   else if (tab === "betting") screen = <BettingScreen />;
