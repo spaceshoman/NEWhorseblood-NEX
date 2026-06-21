@@ -2,41 +2,76 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <title>血統くん — BLOODLINE PREDICTOR</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>血統くん — UI刷新プロトタイプ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@700;900&family=Shippori+Mincho:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
-    html, body { margin: 0; padding: 0; background: #0a0a0a; }
-    #root { min-height: 100vh; }
-    /* 読み込み中のフォールバック */
-    #boot { color: #c8a84b; font-family: sans-serif; text-align: center; padding: 80px 20px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #050506; }
+    body {
+      font-family: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    #root {
+      width: 100%;
+      max-width: 480px;
+      min-height: 100vh;
+      position: relative;
+      box-shadow: 0 0 80px rgba(0,0,0,0.6);
+    }
+    .kb-app { position: relative; overflow-x: hidden; }
+    .kb-page-tex {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: var(--page-tex); opacity: 0.9;
+    }
+    /* desktopで両脇に余白がある時のステージ装飾 */
+    @media (min-width: 481px) {
+      body::before, body::after {
+        content: ""; position: fixed; top: 0; bottom: 0; width: 50vw; pointer-events: none;
+        background: radial-gradient(120% 80% at 50% 0%, rgba(200,168,75,0.04), transparent 60%);
+      }
+      body::before { left: 0; }
+      body::after { right: 0; }
+    }
+    input::placeholder { color: var(--txt3); }
+    ::selection { background: rgba(216,182,89,0.3); }
+    button { font-family: inherit; }
+    /* スクロールバー */
+    #root::-webkit-scrollbar { width: 0; }
   </style>
-
-  <!-- React + Babel (CDN, ビルド不要) -->
-  <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js"></script>
 </head>
 <body>
-  <div id="root"><div id="boot">血統くん 起動中…</div></div>
+  <div id="root"></div>
 
-  <!-- データ・定数・エンジン（プレーンJS。Babel不要、先に実行） -->
-  <script src="constants.js"></script>
-  <script src="storage.js"></script>
-  <script src="calcAptitude.js"></script>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-  <!-- アプリ本体（JSX。Babelで変換） -->
-  <script type="text/babel" src="App.jsx"></script>
+  <!-- データ & テーマ（plain JS） -->
+  <script src="data.js"></script>
+  <script src="race-loader.js"></script>
+  <script src="win5-data.js"></script>
+  <script src="theme.js"></script>
 
-  <!-- PWA: service worker 登録 -->
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("sw.js").catch(() => {});
-      });
-    }
-  </script>
+  <!-- UI（JSX） -->
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="ui.jsx"></script>
+  <script type="text/babel" src="home.jsx"></script>
+  <script type="text/babel" src="racedetail.jsx"></script>
+  <script type="text/babel" src="diagnosis.jsx"></script>
+  <script type="text/babel" src="diagnosis-eyes.jsx"></script>
+  <script type="text/babel" src="review.jsx"></script>
+  <script type="text/babel" src="race-panel.jsx"></script>
+  <script type="text/babel" src="win5.jsx"></script>
+  <script type="text/babel" src="analysis.jsx"></script>
+  <script type="text/babel" src="extras.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
 </body>
 </html>
