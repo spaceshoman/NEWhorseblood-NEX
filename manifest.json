@@ -1,17 +1,15 @@
 {
-  "name": "血統くん — 血統予想",
+  "name": "血統くん — BLOODLINE PREDICTOR",
   "short_name": "血統くん",
-  "description": "漆黒×ゴールドの血統予想アプリ。AI診断「3つの目」で重賞を読み解く。",
+  "description": "種牡馬血統から競馬を予想する血統診断アプリ",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#050506",
-  "theme_color": "#08080a",
-  "lang": "ja",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
     { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
