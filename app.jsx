@@ -19,7 +19,7 @@ function App() {
   const goTab = (id) => { setTab(id); setRaceOpen(null); window.scrollTo(0, 0); };
 
   // JSON駆動のレース(race-loader.jsで読み込み)
-  const JSON_RACES = ["shirasagiS2026", "fuchuFillies2026"];
+  const JSON_RACES = ["shirasagiS2026", "fuchuFillies2026", "hakodateKinen2026"];
 
   // WIN5タブからレース詳細を開けるように、tabを切り替えてからopenRace
   const openRaceFromWin5 = (id, view) => {

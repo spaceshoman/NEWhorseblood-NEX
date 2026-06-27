@@ -1,0 +1,971 @@
+{
+  "id": "hakodateKinen2026",
+  "race_id": "",
+  "race_name": "第62回 函館記念",
+  "date": "2026/6/28",
+  "venue": "函館",
+  "course": "芝2000m",
+  "expectedPace": "BOTH",
+  "trackCond": "稍重",
+  "frameBonus": {},
+  "runners": [
+    {
+      "num": 1,
+      "frame": 1,
+      "name": "バルナバ",
+      "sire": "ハービンジャー",
+      "bms": "マンハッタンカフェ",
+      "dam": "",
+      "jockey": "斎藤新",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 9,
+      "pastRanks": [
+        9,
+        1,
+        4,
+        1
+      ],
+      "prevRaceName": "福島民報杯",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 2,
+      "frame": 2,
+      "name": "ファウストラーゼン",
+      "sire": "モズアスコット",
+      "bms": "スペシャルウィーク",
+      "dam": "",
+      "jockey": "小林美駒",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "SLOW",
+      "gradeWins": [],
+      "prevRank": 13,
+      "pastRanks": [
+        13,
+        15,
+        12,
+        18
+      ],
+      "prevRaceName": "大阪杯",
+      "prevRaceGrade": "G1",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 3,
+      "frame": 2,
+      "name": "ピースワンデュック",
+      "sire": "グレーターロンドン",
+      "bms": "ジャングルポケット",
+      "dam": "",
+      "jockey": "佐々木大輔",
+      "age": "5",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "逃げ",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 14,
+      "pastRanks": [
+        14,
+        5,
+        5,
+        6
+      ],
+      "prevRaceName": "福島民報杯",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 4,
+      "frame": 3,
+      "name": "マジックサンズ",
+      "sire": "キズナ",
+      "bms": "キングカメハメハ",
+      "dam": "",
+      "jockey": "横山和生",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 4,
+      "pastRanks": [
+        4,
+        6,
+        12,
+        8
+      ],
+      "prevRaceName": "エプソムC",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 5,
+      "frame": 3,
+      "name": "イガッチ",
+      "sire": "リアルスティール",
+      "bms": "キングカメハメハ",
+      "dam": "",
+      "jockey": "浜中俊",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        5,
+        1,
+        1
+      ],
+      "prevRaceName": "センテニアル",
+      "prevRaceGrade": "3勝",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 6,
+      "frame": 4,
+      "name": "サンストックトン",
+      "sire": "ワールドエース",
+      "bms": "キングカメハメハ",
+      "dam": "",
+      "jockey": "松本大輝",
+      "age": "7",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "追込",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 12,
+      "pastRanks": [
+        12,
+        9,
+        5,
+        7
+      ],
+      "prevRaceName": "大阪杯",
+      "prevRaceGrade": "G1",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 7,
+      "frame": 4,
+      "name": "チャックネイト",
+      "sire": "ハーツクライ",
+      "bms": "Dynaformer",
+      "dam": "",
+      "jockey": "鮫島克駿",
+      "age": "8",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 0,
+      "style": "差し",
+      "paceType": "SLOW",
+      "gradeWins": [],
+      "prevRank": 8,
+      "pastRanks": [
+        8,
+        13,
+        7,
+        5
+      ],
+      "prevRaceName": "日経賞",
+      "prevRaceGrade": "G2",
+      "prevRaceDist": 2500,
+      "training": ""
+    },
+    {
+      "num": 8,
+      "frame": 5,
+      "name": "ケイアイセナ",
+      "sire": "ディープインパクト",
+      "bms": "Smarty Jones",
+      "dam": "",
+      "jockey": "武豊",
+      "age": "7",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 10,
+      "pastRanks": [
+        10,
+        2,
+        12,
+        4
+      ],
+      "prevRaceName": "ダービーCT",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1600,
+      "training": ""
+    },
+    {
+      "num": 9,
+      "frame": 5,
+      "name": "オニャンコポン",
+      "sire": "エイシンフラッシュ",
+      "bms": "ヴィクトワールピサ",
+      "dam": "",
+      "jockey": "横山琉人",
+      "age": "7",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 15,
+      "pastRanks": [
+        15,
+        11,
+        11,
+        8
+      ],
+      "prevRaceName": "エプソムC",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 10,
+      "frame": 6,
+      "name": "ケリフレッドアスク",
+      "sire": "ドゥラメンテ",
+      "bms": "ディープインパクト",
+      "dam": "",
+      "jockey": "北村友一",
+      "age": "4",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 0,
+      "style": "追込",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 14,
+      "pastRanks": [
+        14,
+        4,
+        8,
+        14
+      ],
+      "prevRaceName": "ヴィクトリアM",
+      "prevRaceGrade": "G1",
+      "prevRaceDist": 1600,
+      "training": ""
+    },
+    {
+      "num": 11,
+      "frame": 6,
+      "name": "ジュタ",
+      "sire": "ドゥラメンテ",
+      "bms": "Street Sense",
+      "dam": "",
+      "jockey": "坂井瑠星",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 8,
+      "pastRanks": [
+        8,
+        1,
+        3,
+        12
+      ],
+      "prevRaceName": "エプソムC",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 12,
+      "frame": 7,
+      "name": "エコロディノス",
+      "sire": "キタサンブラック",
+      "bms": "Generous",
+      "dam": "",
+      "jockey": "池添謙一",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 15,
+      "pastRanks": [
+        15,
+        3,
+        1,
+        1
+      ],
+      "prevRaceName": "大阪杯",
+      "prevRaceGrade": "G1",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 13,
+      "frame": 7,
+      "name": "アラタ",
+      "sire": "キングカメハメハ",
+      "bms": "ハーツクライ",
+      "dam": "",
+      "jockey": "大野拓弥",
+      "age": "9",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 10,
+      "pastRanks": [
+        10,
+        15,
+        4,
+        3
+      ],
+      "prevRaceName": "金鯱賞",
+      "prevRaceGrade": "G2",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 14,
+      "frame": 8,
+      "name": "フィーリウス",
+      "sire": "キタサンブラック",
+      "bms": "ロードカナロア",
+      "dam": "",
+      "jockey": "丹内祐次",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        1,
+        4,
+        2
+      ],
+      "prevRaceName": "スピカS",
+      "prevRaceGrade": "3勝",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 15,
+      "frame": 8,
+      "name": "デビットバローズ",
+      "sire": "ロードカナロア",
+      "bms": "サンデーサイレンス",
+      "dam": "",
+      "jockey": "岩田望来",
+      "age": "7",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 8,
+      "pastRanks": [
+        8,
+        1,
+        5,
+        9
+      ],
+      "prevRaceName": "大阪杯",
+      "prevRaceGrade": "G1",
+      "prevRaceDist": 2000,
+      "training": ""
+    }
+  ],
+  "trends": {
+    "popularity": [
+      {
+        "label": "波乱度",
+        "val": "過去10年で3連単10万円超が7回。2020年は343万馬券。屈指の荒れるハンデ重賞",
+        "hl": true
+      },
+      {
+        "label": "関東馬",
+        "val": "7勝と勝ち星は多いが2・3着は少ない。3着内は全て1ケタ人気",
+        "hl": false
+      },
+      {
+        "label": "関西馬",
+        "val": "2・3着が多く連対率・複勝率で上回る。10番人気以下の激走多数、回収率200%超",
+        "hl": true
+      }
+    ],
+    "popTip": "波乱必至の一戦。関西馬の人気薄（10番人気以下）が連対率・複勝率で1ケタ人気を上回り、単複回収率200%超。人気サイドだけで決まりにくく、伏兵の激走を常に警戒。",
+    "draw": [
+      {
+        "label": "内枠",
+        "val": "洋芝小回り2000mで内をロスなく回れる先行〜好位が有利"
+      },
+      {
+        "label": "馬場状態",
+        "val": "6/27時点で芝は水分含みソフト、前・内有利。時計かかる地力型向き",
+        "hl": true
+      }
+    ],
+    "drawTip": "函館芝2000mは小回りでコーナー4つ。今週は重め馬場で内・前有利が強調される。外枠の差し追込はコーナーロスと馬場の脚抜きの悪さで割引。",
+    "style": [
+      {
+        "label": "先行・好位",
+        "val": "重め馬場×小回りで先行有利 → エコロディノス、フィーリウス、イガッチ、ファウストラーゼン",
+        "hl": true
+      },
+      {
+        "label": "差し・追込",
+        "val": "高速上がり頼みは割引。長く脚を使えるタイプのみ → ジュタ、バルナバ"
+      }
+    ],
+    "styleTip": "今回のソフトな馬場では、瞬発力一発の差し馬より、コーナーで脚を使いながら長く伸びる先行・好位の地力型が優位。良馬場の高速上がりが武器の差し馬は人気でも取りこぼしに注意。",
+    "blood": [
+      {
+        "label": "キタサンブラック",
+        "val": "重め馬場×小回り2000mの持続力◎ → エコロディノス、フィーリウス",
+        "hl": true
+      },
+      {
+        "label": "ドゥラメンテ／キングカメハメハ系",
+        "val": "パワーと持続力。道悪適性 → ジュタ、ケリフレッドアスク、マジックサンズ、アラタ"
+      },
+      {
+        "label": "ハービンジャー",
+        "val": "重馬場・洋芝巧者。欧州型スタミナ → バルナバ",
+        "hl": true
+      }
+    ],
+    "bloodTip": "函館の重め洋芝2000mは、瞬発力型より持続力・スタミナ型の血統が活きる舞台。キタサンブラック産駒（エコロディノス・フィーリウス）の持続力、ハービンジャー産駒（バルナバ）の重馬場巧者ぶりに注目。",
+    "rotation": [
+      {
+        "label": "前走重賞×今回斤量減",
+        "val": "【4-2-5-17】複勝率39.3%。函館記念の黄金データ",
+        "hl": true,
+        "horses": "オニャンコポン、ケリフレッドアスク（軽ハンデ54-55kg）"
+      },
+      {
+        "label": "前走中央開催組",
+        "val": "複勝率27.5%。東京・阪神・京都・中山組が優勢",
+        "hl": true,
+        "horses": "ファウストラーゼン、マジックサンズ、ジュタ、エコロディノス"
+      },
+      {
+        "label": "前走5着以下×斤量減",
+        "val": "前走5着以下で今回斤量減が毎年1頭は3着内",
+        "hl": false,
+        "horses": "オニャンコポン、ファウストラーゼン"
+      }
+    ],
+    "rotationTip": "函館記念の核心データは「前走重賞組で今回斤量減」（複勝率39.3%、3着内の7/11頭が7番人気以下の伏兵）。さらに前走中央開催組（複勝率27.5%）が前走ローカル組（12.4%）を圧倒。軽ハンデ×前走重賞×中央帰りが穴の必須条件。",
+    "rotationHorses": [
+      {
+        "name": "オニャンコポン",
+        "label": "前走エプソムC(G3)・54kg軽ハンデ・前走5着以下"
+      },
+      {
+        "name": "ファウストラーゼン",
+        "label": "前走大阪杯(G1)・中央開催・前走二桁巻き返し"
+      },
+      {
+        "name": "バルナバ",
+        "label": "前走重賞ではないが55kg軽ハンデ・ハービンジャー重馬場◎"
+      }
+    ],
+    "pickup": {
+      "title": "重要データ×出走馬マッチング",
+      "horses": [
+        {
+          "name": "エコロディノス",
+          "note": "🏆前走大阪杯(G1)からの中央帰り。キタサンブラック産駒の持続力×先行力。京都記念3着の地力。前走は度外視可"
+        },
+        {
+          "name": "イガッチ",
+          "note": "📊前走3勝クラス1着で勢い。1番人気想定。リアルスティール産駒で先行力あり"
+        },
+        {
+          "name": "フィーリウス",
+          "note": "📊前走3勝クラス1着。キタサンブラック×ロードカナロアの好配合。重め馬場の持続力◎"
+        },
+        {
+          "name": "オニャンコポン",
+          "note": "📊前走G3×54kg軽ハンデ×前走5着以下＝函館記念の穴データに合致。先行有利馬場も向く"
+        },
+        {
+          "name": "デビットバローズ",
+          "note": "📊昨年しらさぎS5着、鳴尾記念勝ちの実績。ただし58kg重ハンデが課題"
+        }
+      ]
+    }
+  },
+  "result": null,
+  "review": null,
+  "verification": null,
+  "simulation": {
+    "n": 1000,
+    "sigma": 8,
+    "method": "モンテカルロ法（Box-Muller正規乱数、σ=8）",
+    "note": "オッズ（市場評価）を土台に、6/28函館の重め馬場・先行有利・洋芝小回り適性で補正した強さスコアベース。混戦で上位拮抗。",
+    "results": [
+      {
+        "num": 12,
+        "name": "エコロディノス",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 7,
+        "score": 69.1,
+        "winPct": 14.2,
+        "place2Pct": 26.8,
+        "place3Pct": 35.8,
+        "avgRank": 5.8,
+        "ev": 0
+      },
+      {
+        "num": 5,
+        "name": "イガッチ",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 3,
+        "score": 68.2,
+        "winPct": 13.4,
+        "place2Pct": 23.8,
+        "place3Pct": 34.9,
+        "avgRank": 6.0,
+        "ev": 0
+      },
+      {
+        "num": 14,
+        "name": "フィーリウス",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 8,
+        "score": 68.2,
+        "winPct": 13.1,
+        "place2Pct": 23.3,
+        "place3Pct": 33.1,
+        "avgRank": 6.2,
+        "ev": 0
+      },
+      {
+        "num": 2,
+        "name": "ファウストラーゼン",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 2,
+        "score": 68.1,
+        "winPct": 11.5,
+        "place2Pct": 21.3,
+        "place3Pct": 28.8,
+        "avgRank": 6.4,
+        "ev": 0
+      },
+      {
+        "num": 8,
+        "name": "ケイアイセナ",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 5,
+        "score": 67.5,
+        "winPct": 9.6,
+        "place2Pct": 17.7,
+        "place3Pct": 27.8,
+        "avgRank": 6.6,
+        "ev": 0
+      },
+      {
+        "num": 9,
+        "name": "オニャンコポン",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 5,
+        "score": 67.1,
+        "winPct": 8.0,
+        "place2Pct": 17.3,
+        "place3Pct": 28.4,
+        "avgRank": 6.7,
+        "ev": 0
+      },
+      {
+        "num": 3,
+        "name": "ピースワンデュック",
+        "pop": 0,
+        "tan": 0,
+        "style": "逃げ",
+        "frame": 2,
+        "score": 65.1,
+        "winPct": 5.7,
+        "place2Pct": 12.2,
+        "place3Pct": 17.8,
+        "avgRank": 7.8,
+        "ev": 0
+      },
+      {
+        "num": 11,
+        "name": "ジュタ",
+        "pop": 0,
+        "tan": 0,
+        "style": "差し",
+        "frame": 6,
+        "score": 64.7,
+        "winPct": 4.6,
+        "place2Pct": 11.0,
+        "place3Pct": 16.5,
+        "avgRank": 8.0,
+        "ev": 0
+      },
+      {
+        "num": 15,
+        "name": "デビットバローズ",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 8,
+        "score": 64.5,
+        "winPct": 5.9,
+        "place2Pct": 12.9,
+        "place3Pct": 19.5,
+        "avgRank": 7.9,
+        "ev": 0
+      },
+      {
+        "num": 6,
+        "name": "サンストックトン",
+        "pop": 0,
+        "tan": 0,
+        "style": "追込",
+        "frame": 4,
+        "score": 63.6,
+        "winPct": 4.2,
+        "place2Pct": 10.1,
+        "place3Pct": 16.1,
+        "avgRank": 8.3,
+        "ev": 0
+      },
+      {
+        "num": 13,
+        "name": "アラタ",
+        "pop": 0,
+        "tan": 0,
+        "style": "先行",
+        "frame": 7,
+        "score": 62.6,
+        "winPct": 3.0,
+        "place2Pct": 7.2,
+        "place3Pct": 12.8,
+        "avgRank": 8.9,
+        "ev": 0
+      },
+      {
+        "num": 1,
+        "name": "バルナバ",
+        "pop": 0,
+        "tan": 0,
+        "style": "差し",
+        "frame": 1,
+        "score": 61.8,
+        "winPct": 3.0,
+        "place2Pct": 7.1,
+        "place3Pct": 11.9,
+        "avgRank": 9.3,
+        "ev": 0
+      },
+      {
+        "num": 4,
+        "name": "マジックサンズ",
+        "pop": 0,
+        "tan": 0,
+        "style": "差し",
+        "frame": 3,
+        "score": 61.2,
+        "winPct": 2.5,
+        "place2Pct": 5.2,
+        "place3Pct": 9.0,
+        "avgRank": 9.5,
+        "ev": 0
+      },
+      {
+        "num": 10,
+        "name": "ケリフレッドアスク",
+        "pop": 0,
+        "tan": 0,
+        "style": "追込",
+        "frame": 6,
+        "score": 58.8,
+        "winPct": 0.7,
+        "place2Pct": 3.0,
+        "place3Pct": 5.5,
+        "avgRank": 10.8,
+        "ev": 0
+      },
+      {
+        "num": 7,
+        "name": "チャックネイト",
+        "pop": 0,
+        "tan": 0,
+        "style": "差し",
+        "frame": 4,
+        "score": 56.1,
+        "winPct": 0.6,
+        "place2Pct": 1.1,
+        "place3Pct": 2.1,
+        "avgRank": 11.8,
+        "ev": 0
+      }
+    ]
+  },
+  "prevDayAnalysis": {
+    "date": "2026/6/27（土）",
+    "trackCondForecast": "稍重〜重（時計かかる・前内有利）",
+    "summary": "6/27の函館は晴れでも芝は重・ダートは不良。開催が進んだ影響もあり時計が出にくいコンディション。函館馬場情報でも芝は『良好だが水分を含んでソフト』『前・内有利』とされ、スピードで押し切るより地力型が合いやすい。芝2000mの今回、コーナーで脚を使える先行〜好位の持続型が優位。良馬場の高速上がり頼みの差し馬は人気でも取りこぼしリスクを見ておきたい。",
+    "races": [],
+    "conditionChange": [
+      {
+        "item": "馬場状態",
+        "good": "前・内有利、地力型・持続型が浮上",
+        "heavy": "水分含みソフトで時計かかる。脚抜き悪い"
+      },
+      {
+        "item": "脚質",
+        "good": "先行〜好位でコーナーから動ける馬",
+        "heavy": "高速上がり一発の差し・追込は割引"
+      },
+      {
+        "item": "血統",
+        "good": "キタサンブラック・ハービンジャー等の持続/スタミナ型",
+        "heavy": "瞬発力特化のディープ系差し馬は減点"
+      },
+      {
+        "item": "枠順",
+        "good": "内枠をロスなく立ち回れる先行馬",
+        "heavy": "外枠の差し追込はコーナーロス増"
+      },
+      {
+        "item": "斤量",
+        "good": "54-55kgの軽ハンデ（データ複勝率39.3%）",
+        "heavy": "58kgの重ハンデ勢は割引"
+      }
+    ],
+    "horseMatrix": [
+      {
+        "name": "エコロディノス",
+        "num": 12,
+        "pop": 0,
+        "frame": "7枠",
+        "style": "先行",
+        "heavy": "◎",
+        "sashi": "○",
+        "data": "キタサンブラック×先行×G1帰り。持続力で重め馬場ベスト",
+        "rank": "S"
+      },
+      {
+        "name": "イガッチ",
+        "num": 5,
+        "pop": 0,
+        "frame": "3枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "○",
+        "data": "3勝クラス1着の勢い。1番人気想定の先行力",
+        "rank": "A"
+      },
+      {
+        "name": "フィーリウス",
+        "num": 14,
+        "pop": 0,
+        "frame": "8枠",
+        "style": "先行",
+        "heavy": "◎",
+        "sashi": "○",
+        "data": "キタサンブラック産駒。3勝1着。外枠だけ注意",
+        "rank": "A"
+      },
+      {
+        "name": "ファウストラーゼン",
+        "num": 2,
+        "pop": 0,
+        "frame": "2枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "G1帰りの中央開催組。内枠先行で巻き返し",
+        "rank": "A"
+      },
+      {
+        "name": "オニャンコポン",
+        "num": 9,
+        "pop": 0,
+        "frame": "5枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "○",
+        "data": "54kg軽ハンデ×前走G3×先行。穴データ合致",
+        "rank": "B"
+      },
+      {
+        "name": "ケイアイセナ",
+        "num": 8,
+        "pop": 0,
+        "frame": "5枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "札幌記念4着の地力。57.5kgがやや重い",
+        "rank": "B"
+      },
+      {
+        "name": "バルナバ",
+        "num": 1,
+        "pop": 0,
+        "frame": "1枠",
+        "style": "差し",
+        "heavy": "○",
+        "sashi": "○",
+        "data": "ハービンジャー重馬場巧者×1枠×55kg",
+        "rank": "B"
+      },
+      {
+        "name": "マジックサンズ",
+        "num": 4,
+        "pop": 0,
+        "frame": "3枠",
+        "style": "差し",
+        "heavy": "△",
+        "sashi": "▲",
+        "data": "高速上がり型×58kg。重め馬場は割引",
+        "rank": "C"
+      },
+      {
+        "name": "チャックネイト",
+        "num": 7,
+        "pop": 0,
+        "frame": "4枠",
+        "style": "差し",
+        "heavy": "△",
+        "sashi": "▲",
+        "data": "せん8歳×58kg。高速差し頼みで今回は不向き",
+        "rank": "C"
+      }
+    ],
+    "pickupHorses": [
+      {
+        "name": "エコロディノス",
+        "num": 12,
+        "pop": 0,
+        "odds": 0,
+        "label": "馬場の本命",
+        "color": "#1e5fa8",
+        "reasons": [
+          "キタサンブラック産駒の持続力×先行力＝重め馬場の最適解",
+          "前走大阪杯(G1)は度外視可、京都記念3着の地力",
+          "先行有利の馬場で好位を取れる脚質",
+          "池添謙一とのコンビ継続で手の内"
+        ]
+      },
+      {
+        "name": "オニャンコポン",
+        "num": 9,
+        "pop": 0,
+        "odds": 0,
+        "label": "穴の本命",
+        "color": "#c8a84b",
+        "reasons": [
+          "前走G3×54kg軽ハンデ×前走5着以下＝函館記念の穴3条件に完全合致",
+          "せん7歳の先行力は重め馬場で生きる",
+          "人気薄（13番人気想定）で配当妙味大",
+          "関西所属ではないが軽ハンデ伏兵の典型"
+        ]
+      },
+      {
+        "name": "バルナバ",
+        "num": 1,
+        "pop": 0,
+        "odds": 0,
+        "label": "血統の妙味",
+        "color": "#2fa54a",
+        "reasons": [
+          "ハービンジャー産駒は重馬場・洋芝巧者",
+          "1枠をロスなく立ち回れる",
+          "55kgの軽ハンデ",
+          "前々走3勝クラス1着の地力"
+        ]
+      }
+    ],
+    "dangerHorses": [
+      {
+        "name": "マジックサンズ",
+        "num": 4,
+        "pop": 0,
+        "odds": 0,
+        "note": "前走エプソムC4着で人気だが、東京・中山の高速上がり（上がり33秒台連発）が武器の差し脚質。58kgの重ハンデと重め馬場でこの脚が削がれるリスク大。前走1800mからの距離延長も課題。"
+      },
+      {
+        "name": "イガッチ",
+        "num": 5,
+        "pop": 0,
+        "odds": 0,
+        "note": "1番人気想定だが3勝クラスからの格上挑戦で重賞は未知数。55kgは恵まれたが、重め馬場の重賞でいきなり通用するかは半信半疑。過信は禁物。"
+      }
+    ],
+    "bettingStrategy": {
+      "axis": "エコロディノス",
+      "axisReason": "キタサンブラック×先行×G1帰り。重め馬場のベスト",
+      "counter": "フィーリウス",
+      "counterReason": "キタサンブラック産駒×3勝1着の上昇度",
+      "hole": "オニャンコポン",
+      "holeReason": "54kg軽ハンデ×前走G3×先行＝穴データ合致",
+      "bighole": "バルナバ",
+      "bigholeReason": "ハービンジャー重馬場巧者×1枠×軽ハンデ"
+    },
+    "impactOnRace": [
+      "🟢 先行〜好位が有利（重め馬場×小回り）→ エコロディノス・フィーリウス・イガッチ・ファウストラーゼンに追い風",
+      "🟢 軽ハンデ馬が浮上（データ複勝率39.3%）→ オニャンコポン・バルナバ",
+      "🟢 持続力血統が活きる → キタサンブラック産駒（エコロ・フィーリウス）、ハービンジャー（バルナバ）",
+      "🔴 高速上がり頼みの差し馬は割引 → マジックサンズ・チャックネイトは人気でも危険",
+      "🔴 58kg重ハンデ勢は試練 → デビットバローズ・アラタ・チャックネイト"
+    ]
+  }
+}
