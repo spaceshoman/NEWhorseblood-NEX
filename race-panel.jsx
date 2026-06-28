@@ -41,12 +41,12 @@ const JsonRaceDetail = ({ raceId, onBack }) => {
       </div>
 
       <div style={{ display: "flex", gap: 4, margin: "16px 16px 0", padding: 3, background: "var(--surface)", border: "1px solid var(--line2)", borderRadius: "var(--radius)" }}>
-        {[["diag", "🔮 AI血統診断"], ["list", "📋 出馬表"]].map(([id, label]) => {
+        {[["diag", "🔮 AI血統診断"], ["list", "📋 出馬表"], ...(K.race.result ? [["result", "🏁 結果・回顧"]] : [])].map(([id, label]) => {
           const on = view === id;
           return (
             <button key={id} onClick={() => setView(id)} style={{
               flex: 1, padding: "10px 0", border: "none", borderRadius: "calc(var(--radius) - 3px)", cursor: "pointer",
-              fontFamily: "var(--display)", fontWeight: 700, fontSize: 13,
+              fontFamily: "var(--display)", fontWeight: 700, fontSize: 12,
               background: on ? "var(--gold-grad)" : "transparent", color: on ? "#15120a" : "var(--txt2)",
               boxShadow: on ? "var(--glow)" : "none", transition: "all .2s",
             }}>{label}</button>
@@ -54,7 +54,7 @@ const JsonRaceDetail = ({ raceId, onBack }) => {
         })}
       </div>
 
-      {view === "list" ? <JsonRaceEntries K={K} /> : <JsonRaceDiagnosis K={K} />}
+      {view === "list" ? <JsonRaceEntries K={K} /> : view === "result" ? <JsonRaceResult K={K} /> : <JsonRaceDiagnosis K={K} />}
     </div>
   );
 };
@@ -439,7 +439,128 @@ const JsonRaceEntries = ({ K }) => {
   );
 };
 
+/* ===== 結果・回顧タブ ===== */
+const JsonRaceResult = ({ K }) => {
+  const res = K.race.result, rev = K.race.review, ver = K.race.verification;
+  const byNum = K.byNum;
+  return (
+    <div style={{ padding: "16px 16px 24px" }}>
+      {/* 着順 */}
+      <SectionTitle jp="レース結果" en="RESULT" icon="🏁"
+        right={<span style={{ fontSize: 10, color: "var(--txt3)" }}>{res.weather}・芝{res.trackCond}</span>} />
+      <Card pad={0} style={{ overflow: "hidden", marginBottom: 16 }}>
+        {res.topFinishers.map((f, i) => {
+          const mk = K.markMap && K.markMap[f.num];
+          return (
+            <div key={f.num} style={{ display: "flex", alignItems: "center", gap: 9, padding: "9px 13px", borderBottom: i < res.topFinishers.length - 1 ? "1px solid var(--line2)" : "none", background: i === 0 ? "var(--gold-soft)" : "transparent" }}>
+              <span style={{ fontFamily: "var(--num)", fontSize: 16, color: i === 0 ? "var(--gold-bright)" : "var(--txt2)", width: 22, textAlign: "center" }}>{f.rank}</span>
+              <span style={{ fontFamily: "var(--num)", fontSize: 13, color: "var(--txt2)", width: 20, textAlign: "center" }}>{f.num}</span>
+              {mk && <Mark mark={mk} size={16} />}
+              <span style={{ fontSize: 12.5, color: "var(--txt)", fontWeight: i === 0 ? 700 : 500, flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.name}</span>
+              <span style={{ fontSize: 10, color: "var(--txt3)" }}>{f.pop}人気</span>
+              <span style={{ fontSize: 10, color: "var(--txt3)", width: 34, textAlign: "right" }}>{f.style}</span>
+            </div>
+          );
+        })}
+      </Card>
+
+      {/* 払戻 */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
+        {Object.entries(res.payouts).map(([k, v]) => {
+          const label = { tansho: "単勝", umaren: "馬連", sanrenpuku: "3連複", sanrentan: "3連単" }[k] || k;
+          return (
+            <div key={k} style={{ flex: "1 1 45%", padding: "8px 11px", background: "var(--surface)", border: "1px solid var(--line2)", borderRadius: "var(--radius)" }}>
+              <div style={{ fontSize: 9, color: "var(--txt3)", marginBottom: 2 }}>{label}</div>
+              <div style={{ fontFamily: "var(--num)", fontSize: 12.5, color: "var(--gold-bright)" }}>{v}</div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* 回顧 */}
+      {rev && (
+        <>
+          <SectionTitle jp="回顧" en="REVIEW" icon="📝" />
+          <Card pad={14} style={{ marginBottom: 14 }}>
+            <div style={{ fontSize: 13, fontWeight: 800, color: "var(--gold-bright)", lineHeight: 1.6, marginBottom: 9, textWrap: "pretty" }}>{rev.headline}</div>
+            <div style={{ fontSize: 11.5, color: "var(--txt2)", lineHeight: 1.85, textWrap: "pretty" }}>{rev.summary}</div>
+          </Card>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 14 }}>
+            <div style={{ padding: 12, background: "var(--gold-soft)", border: "1px solid var(--line)", borderRadius: "var(--radius)" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "var(--gold-bright)", marginBottom: 7 }}>◎ 的中・好評価</div>
+              {rev.good.map((g, i) => (
+                <div key={i} style={{ fontSize: 11, color: "var(--txt2)", lineHeight: 1.7, marginBottom: 5, paddingLeft: 12, position: "relative", textWrap: "pretty" }}>
+                  <span style={{ position: "absolute", left: 0, color: "var(--gold)" }}>·</span>{g}
+                </div>
+              ))}
+            </div>
+            <div style={{ padding: 12, background: "color-mix(in srgb, var(--surface2) 50%, transparent)", border: "1px solid var(--line2)", borderRadius: "var(--radius)" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "var(--txt2)", marginBottom: 7 }}>✗ 反省点</div>
+              {rev.bad.map((b, i) => (
+                <div key={i} style={{ fontSize: 11, color: "var(--txt3)", lineHeight: 1.7, marginBottom: 5, paddingLeft: 12, position: "relative", textWrap: "pretty" }}>
+                  <span style={{ position: "absolute", left: 0 }}>·</span>{b}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {rev.lesson && (
+            <Card pad={13} style={{ marginBottom: 16, borderColor: "var(--line)" }}>
+              <div style={{ fontSize: 10, color: "var(--gold)", letterSpacing: "1px", marginBottom: 5 }}>💡 教訓</div>
+              <div style={{ fontSize: 11.5, color: "var(--txt2)", lineHeight: 1.8, textWrap: "pretty" }}>{rev.lesson}</div>
+            </Card>
+          )}
+        </>
+      )}
+
+      {/* 買い目検証 */}
+      {ver && (
+        <>
+          <SectionTitle jp="買い目検証" en="VERIFICATION" icon="🎯" />
+          <Card pad={14}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 7, marginBottom: 11 }}>
+              {[ver.honmei, ver.taikou, ver.tanana, ver.renpuku].map((b, i) => (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 9 }}>
+                  <Mark mark={b.mark} size={17} />
+                  <span style={{ fontFamily: "var(--num)", fontSize: 12, color: "var(--txt3)", width: 20, textAlign: "center" }}>{b.num}</span>
+                  <span style={{ fontSize: 12, color: "var(--txt)", flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{b.name}</span>
+                  <span style={{ fontFamily: "var(--num)", fontSize: 12, color: b.hit ? "var(--gold-bright)" : "var(--txt3)" }}>{b.result}着</span>
+                  <span style={{ fontSize: 13 }}>{b.hit ? "🎯" : "·"}</span>
+                </div>
+              ))}
+            </div>
+            {ver.danger_check && (
+              <div style={{ paddingTop: 11, borderTop: "1px solid var(--line2)", marginBottom: 11 }}>
+                <div style={{ fontSize: 10, color: "var(--gold)", letterSpacing: "1px", marginBottom: 6 }}>⚠ 危険馬の判定</div>
+                {ver.danger_check.map((d, i) => (
+                  <div key={i} style={{ fontSize: 11, color: "var(--txt2)", lineHeight: 1.7, marginBottom: 3 }}>
+                    {d.name}（{d.pop}番人気）→ {d.result}着　<span style={{ color: d.hit ? "var(--gold-bright)" : "var(--txt3)" }}>{d.hit ? "指摘的中" : "—"}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            {ver.bets && (
+              <div style={{ paddingTop: 11, borderTop: "1px solid var(--line2)", marginBottom: 11 }}>
+                {ver.bets.map((bt, i) => (
+                  <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 8, marginBottom: 6 }}>
+                    <Pill kind={bt.result === "的中" ? "gold" : "ghost"} style={{ fontSize: 9, flexShrink: 0 }}>{bt.type}</Pill>
+                    <span style={{ fontSize: 10.5, color: "var(--txt3)", lineHeight: 1.6, flex: 1, textWrap: "pretty" }}>{bt.target} — {bt.note}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+            <div style={{ paddingTop: 11, borderTop: "1px solid var(--line2)", fontSize: 11.5, color: "var(--txt2)", lineHeight: 1.8, textWrap: "pretty" }}>
+              <span style={{ color: "var(--gold)" }}>総括: </span>{ver.verdict}
+            </div>
+          </Card>
+        </>
+      )}
+    </div>
+  );
+};
+
 /* 旧API互換 */
 const ShirasagiRaceDetail = ({ onBack }) => <JsonRaceDetail raceId="shirasagiS2026" onBack={onBack} />;
 
-Object.assign(window, { JsonRaceDetail, ShirasagiRaceDetail });
+Object.assign(window, { JsonRaceDetail, ShirasagiRaceDetail, JsonRaceResult });

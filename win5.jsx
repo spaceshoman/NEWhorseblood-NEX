@@ -19,6 +19,9 @@ const Win5Screen = ({ onOpenRace }) => {
     <div>
       <Header title="WIN5 予想" sub="JACKPOT FIVE" />
 
+      {/* レース後の結果バナー */}
+      {K.win5Result && <Win5ResultBanner res={K.win5Result} />}
+
       {/* ヒーロー */}
       <div style={{ margin: "14px 14px 0", borderRadius: "var(--radius-lg)", padding: "18px 18px 16px", background: "var(--hero)", border: "1px solid var(--line)", boxShadow: "var(--glow)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
@@ -77,6 +80,9 @@ const Win5Screen = ({ onOpenRace }) => {
         </div>
       </div>
 
+      {/* 推奨買い目パターン */}
+      {K.betPatterns && <Win5BetPatterns bp={K.betPatterns} />}
+
       {/* モデル説明 */}
       <div style={{ padding: "8px 14px 28px" }}>
         <Card pad={13}>
@@ -113,16 +119,31 @@ const Win5RaceCard = ({ r, confColor, confLabel, onOpenRace }) => {
         </div>
       </div>
 
+      {/* レース後の結果表示 */}
+      {r.result && (
+        <div style={{ padding: "8px 13px", background: r.result.hit ? "var(--gold-soft)" : "color-mix(in srgb, var(--surface2) 50%, transparent)", borderBottom: "1px solid var(--line2)", display: "flex", alignItems: "center", gap: 8 }}>
+          <span style={{ fontSize: 12 }}>{r.result.hit ? "🎯" : "✗"}</span>
+          <span style={{ fontSize: 9.5, color: "var(--txt3)", letterSpacing: "1px" }}>勝馬</span>
+          <span style={{ fontFamily: "var(--num)", fontSize: 14, color: "var(--gold-bright)" }}>{r.result.winNum}</span>
+          <span style={{ fontSize: 12, color: "var(--txt)", fontWeight: 700 }}>{r.result.winName}</span>
+          <span style={{ fontSize: 9.5, color: "var(--txt3)" }}>{r.result.winPop}番人気</span>
+          <span style={{ marginLeft: "auto", fontSize: 10, color: r.result.hit ? "var(--gold-bright)" : "var(--txt3)" }}>
+            {r.result.inTop5 ? `自分の${r.result.myMark}で的中` : "印なし(取りこぼし)"}
+          </span>
+        </div>
+      )}
+
       {/* 上位5頭 */}
       <div style={{ padding: "8px 0" }}>
         {r.top.map((h, i) => {
           const isTop = i === 0;
+          const isWinner = r.result && r.result.winNum === h.num;
           const barW = (h.prob / r.top[0].prob) * 100; // 相対バー
           return (
-            <div key={h.num} style={{ display: "flex", alignItems: "center", gap: 9, padding: "6px 13px" }}>
+            <div key={h.num} style={{ display: "flex", alignItems: "center", gap: 9, padding: "6px 13px", background: isWinner ? "var(--gold-soft)" : "transparent" }}>
               <Mark mark={h.mark} size={18} />
               <span style={{ fontFamily: "var(--num)", fontSize: 14, color: "var(--txt2)", width: 20, textAlign: "center", flexShrink: 0 }}>{h.num}</span>
-              <span style={{ fontSize: 12.5, color: isTop ? "var(--txt)" : "var(--txt2)", fontWeight: isTop ? 700 : 500, flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{h.name}</span>
+              <span style={{ fontSize: 12.5, color: isTop ? "var(--txt)" : "var(--txt2)", fontWeight: isTop ? 700 : 500, flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{h.name}{isWinner && <span style={{ marginLeft: 6, fontSize: 9, color: "var(--gold-bright)" }}>🏆勝</span>}</span>
               <div style={{ width: 60, height: 5, borderRadius: 5, background: "rgba(255,255,255,0.05)", overflow: "hidden", flexShrink: 0 }}>
                 <div style={{ width: `${barW}%`, height: "100%", background: isTop ? "var(--gold-grad)" : "rgba(216,182,89,0.4)" }} />
               </div>
@@ -158,4 +179,126 @@ const Win5RaceCard = ({ r, confColor, confLabel, onOpenRace }) => {
   );
 };
 
-Object.assign(window, { Win5Screen, Win5RaceCard });
+/* ===== レース後の結果バナー ===== */
+const Win5ResultBanner = ({ res }) => {
+  return (
+    <div style={{ margin: "14px 14px 0", borderRadius: "var(--radius-lg)", padding: "16px 16px 14px", background: "var(--hero)", border: "1px solid var(--line)", boxShadow: "var(--glow)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 10 }}>
+        <span style={{ fontSize: 16 }}>🏁</span>
+        <span style={{ fontFamily: "var(--num)", fontSize: 12, letterSpacing: "2.5px", color: "var(--gold)" }}>WIN5 RESULT</span>
+        <Pill kind="ghost" style={{ marginLeft: "auto", fontSize: 9 }}>確定</Pill>
+      </div>
+      <div style={{ display: "flex", gap: 12, marginBottom: 12 }}>
+        <div>
+          <div style={{ fontSize: 9, color: "var(--txt3)", letterSpacing: "1px" }}>的中馬番</div>
+          <div style={{ fontFamily: "var(--num)", fontSize: 18, color: "var(--gold-bright)", marginTop: 2, letterSpacing: "1px" }}>{res.hitNums}</div>
+        </div>
+        <div>
+          <div style={{ fontSize: 9, color: "var(--txt3)", letterSpacing: "1px" }}>払戻</div>
+          <div style={{ fontFamily: "var(--num)", fontSize: 18, color: "var(--gold-bright)", marginTop: 2 }}>{res.payout}</div>
+        </div>
+        <div>
+          <div style={{ fontSize: 9, color: "var(--txt3)", letterSpacing: "1px" }}>的中票数</div>
+          <div style={{ fontFamily: "var(--num)", fontSize: 18, color: "var(--txt)", marginTop: 2 }}>{res.hitTickets}<span style={{ fontSize: 10, color: "var(--txt3)" }}>票</span></div>
+        </div>
+      </div>
+      <div style={{ fontSize: 11, color: "var(--txt2)", lineHeight: 1.7, textWrap: "pretty" }}>{res.summary}</div>
+
+      {/* 推奨パターンの成績 */}
+      {res.patternResults && res.patternResults.length > 0 && (
+        <div style={{ marginTop: 12, paddingTop: 12, borderTop: "1px solid var(--line2)" }}>
+          <div style={{ fontSize: 10, color: "var(--gold)", letterSpacing: "1px", marginBottom: 8 }}>推奨パターンの成績</div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+            {res.patternResults.map((pr, i) => {
+              const near = pr.hits === 4;
+              return (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 11, color: "var(--txt)", flex: 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{pr.label}</span>
+                  <span style={{ fontFamily: "var(--num)", fontSize: 13, color: near ? "var(--gold-bright)" : "var(--txt2)" }}>{pr.hits}<span style={{ fontSize: 9, color: "var(--txt3)" }}>/5</span></span>
+                  {near && <Pill kind="gold" style={{ fontSize: 8 }}>あと1</Pill>}
+                  <span style={{ fontSize: 9, color: "var(--txt3)", width: 90, textAlign: "right", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>外: {pr.missRaces.join("・")}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+/* ===== 推奨買い目パターン ===== */
+const Win5BetPatterns = ({ bp }) => {
+  const [open, setOpen] = React.useState(0); // 開いているパターンのindex（最初=Bを開く）
+
+  return (
+    <div style={{ padding: "12px 14px 8px" }}>
+      <SectionTitle jp={bp.title} en="BET PATTERNS" icon="🎫"
+        right={<span style={{ fontSize: 10, color: "var(--txt3)" }}>{bp.budget}</span>} />
+
+      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        {bp.patterns.map((p, i) => {
+          const isOpen = open === i;
+          return (
+            <div key={i} style={{
+              borderRadius: "var(--radius)", overflow: "hidden",
+              background: p.best ? "var(--gold-soft)" : "var(--surface)",
+              border: `1px solid ${p.best ? "var(--line)" : "var(--line2)"}`,
+            }}>
+              {/* ヘッダ（タップで開閉） */}
+              <div onClick={() => setOpen(isOpen ? -1 : i)} style={{
+                padding: "11px 13px", cursor: "pointer", display: "flex", alignItems: "center", gap: 9,
+              }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                    <span style={{ fontSize: 13, fontWeight: 800, color: p.best ? "var(--gold-bright)" : "var(--txt)" }}>{p.label}</span>
+                    {p.best && <Pill kind="gold" style={{ fontSize: 8.5 }}>本命推奨</Pill>}
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 4 }}>
+                    <span style={{ fontFamily: "var(--num)", fontSize: 11, color: "var(--gold)", letterSpacing: "1px" }}>{p.formula}</span>
+                    <span style={{ fontFamily: "var(--num)", fontSize: 12, color: "var(--txt)", fontWeight: 700 }}>= {p.points}点</span>
+                    <span style={{ fontSize: 10, color: "var(--txt3)" }}>的中率 {p.hitRate}%</span>
+                  </div>
+                </div>
+                <span style={{ fontSize: 14, color: "var(--txt3)", transform: isOpen ? "rotate(90deg)" : "none", transition: "transform .2s" }}>›</span>
+              </div>
+
+              {/* 展開部 */}
+              {isOpen && (
+                <div style={{ padding: "0 13px 13px" }}>
+                  <div style={{ fontSize: 11, color: "var(--txt2)", lineHeight: 1.7, marginBottom: 10, textWrap: "pretty" }}>{p.desc}</div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                    {p.legs.map((leg) => (
+                      <div key={leg.leg} style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
+                        <div style={{ width: 22, height: 22, borderRadius: "50%", background: "var(--gold-grad)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--num)", fontSize: 13, color: "#15120a", flexShrink: 0 }}>{leg.leg}</div>
+                        <div style={{ flex: 1, minWidth: 0 }}>
+                          <div style={{ fontSize: 10, color: "var(--txt3)", marginBottom: 3 }}>{leg.name}（{leg.picks.length}頭）</div>
+                          <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+                            {leg.picks.map((h) => (
+                              <span key={h.num} style={{
+                                display: "inline-flex", alignItems: "center", gap: 3, padding: "3px 7px",
+                                borderRadius: 6, background: "var(--surface2)", border: "1px solid var(--line2)",
+                                fontSize: 10.5, color: "var(--txt)",
+                              }}>
+                                <span style={{ fontFamily: "var(--num)", fontSize: 11, color: "var(--gold)" }}>{h.num}</span>
+                                {h.name}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      <div style={{ fontSize: 9.5, color: "var(--txt3)", marginTop: 10, lineHeight: 1.7 }}>{bp.note}</div>
+    </div>
+  );
+};
+
+Object.assign(window, { Win5Screen, Win5RaceCard, Win5BetPatterns, Win5ResultBanner });
