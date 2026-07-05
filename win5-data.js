@@ -1,4 +1,4 @@
-/* ===== 血統くん refined — WIN5 データ (2026/7/5・ダート傾向反映版) ===== */
+/* ===== 血統くん refined — WIN5 データ (2026/7/5・結果反映) ===== */
 
 window.KB_WIN5 = {
   "date": "2026.7.5",
@@ -56,7 +56,15 @@ window.KB_WIN5 = {
           "mark": "★"
         }
       ],
-      "buy": "1頭軸 ⑤ベストミーエヴァーで確定"
+      "buy": "1頭軸 ⑤ベストミーエヴァーで確定",
+      "result": {
+        "winNum": 5,
+        "winName": "ベストミーエヴァー",
+        "winPop": 1,
+        "myMark": "◎",
+        "inTop5": true,
+        "hit": true
+      }
     },
     {
       "leg": 2,
@@ -107,7 +115,15 @@ window.KB_WIN5 = {
           "mark": "★"
         }
       ],
-      "buy": "先行2強軸 ②⑨中心に+④③"
+      "buy": "先行2強軸 ②⑨中心に+④③",
+      "result": {
+        "winNum": 9,
+        "winName": "マジックローズ",
+        "winPop": 1,
+        "myMark": "○",
+        "inTop5": true,
+        "hit": true
+      }
     },
     {
       "leg": 3,
@@ -158,7 +174,15 @@ window.KB_WIN5 = {
           "mark": "★"
         }
       ],
-      "buy": "先行勢3-4頭 ⑦④②⑪"
+      "buy": "先行勢3-4頭 ⑦④②⑪",
+      "result": {
+        "winNum": 11,
+        "winName": "ワイドブリザード",
+        "winPop": 4,
+        "myMark": "△",
+        "inTop5": true,
+        "hit": true
+      }
     },
     {
       "leg": 4,
@@ -210,7 +234,15 @@ window.KB_WIN5 = {
         }
       ],
       "buy": "先行重視4頭 ⑨⑫⑧+①",
-      "crossRef": "福島ダート先行有利を反映し、差しのメリークリスマス（1番人気）を本命から外し、先行ロジアデレードを上位に。オッズ通りではなく馬場傾向を優先した判断。人気の差し馬には注意。"
+      "crossRef": "福島ダート先行有利を反映し、差しのメリークリスマス（1番人気）を本命から外し、先行ロジアデレードを上位に。オッズ通りではなく馬場傾向を優先した判断。人気の差し馬には注意。",
+      "result": {
+        "winNum": 7,
+        "winName": "ストレングス",
+        "winPop": 6,
+        "myMark": "★",
+        "inTop5": true,
+        "hit": true
+      }
     },
     {
       "leg": 5,
@@ -262,7 +294,15 @@ window.KB_WIN5 = {
         }
       ],
       "buy": "2-3頭 ⑫⑦(+④)",
-      "crossRef": "⑤北九州記念はG3。小倉芝良の先行/器用さ重視で、先行力のあるフリッカージャブ⑫・デアヴェローチェ⑦が中心。"
+      "crossRef": "⑤北九州記念はG3。小倉芝良の先行/器用さ重視で、先行力のあるフリッカージャブ⑫・デアヴェローチェ⑦が中心。",
+      "result": {
+        "winNum": 12,
+        "winName": "フリッカージャブ",
+        "winPop": 1,
+        "myMark": "◎",
+        "inTop5": true,
+        "hit": true
+      }
     }
   ],
   "betPatterns": {
@@ -704,6 +744,53 @@ window.KB_WIN5 = {
               }
             ]
           }
+        ]
+      }
+    ]
+  },
+  "win5Result": {
+    "hitNums": "5-9-11-7-12",
+    "payout": "205,580円",
+    "hitTickets": 2621,
+    "carryover": "0円",
+    "summary": "全5レースとも勝ち馬に印は的中（◎○△★◎）。③大沼S・④ジュライSで人気薄の逃げ切りが出て、絞ったパターンは取りこぼし。A・Cが4/5であと1歩。",
+    "patternResults": [
+      {
+        "label": "B ②2強+④⑤厚",
+        "hits": 3,
+        "missRaces": [
+          "大沼S",
+          "ジュライS"
+        ]
+      },
+      {
+        "label": "A ④全張り型",
+        "hits": 4,
+        "missRaces": [
+          "大沼S"
+        ]
+      },
+      {
+        "label": "C ③厚張り型",
+        "hits": 4,
+        "missRaces": [
+          "ジュライS"
+        ]
+      },
+      {
+        "label": "D ②厚+先行総流し",
+        "hits": 3,
+        "missRaces": [
+          "大沼S",
+          "ジュライS"
+        ]
+      },
+      {
+        "label": "E バランス型",
+        "hits": 3,
+        "missRaces": [
+          "大沼S",
+          "ジュライS"
         ]
       }
     ]
