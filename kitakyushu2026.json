@@ -1,0 +1,865 @@
+{
+  "id": "kitakyushu2026",
+  "race_id": "",
+  "race_name": "第61回 北九州記念",
+  "date": "2026/7/5",
+  "venue": "小倉",
+  "course": "芝1200m",
+  "expectedPace": "HIGH",
+  "trackCond": "良",
+  "frameBonus": {},
+  "runners": [
+    {
+      "num": 1,
+      "frame": 1,
+      "name": "ランフォーヴァウ",
+      "sire": "ロードカナロア",
+      "bms": "ディープインパクト",
+      "dam": "",
+      "jockey": "石川裕紀人",
+      "age": "4",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 17.3,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        6,
+        4,
+        15
+      ],
+      "prevRaceName": "谷川岳S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 2,
+      "frame": 2,
+      "name": "ジェニファー",
+      "sire": "アニマルキングダム",
+      "bms": "スペシャルウィーク",
+      "dam": "",
+      "jockey": "田山旺佑",
+      "age": "5",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 15.2,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        1,
+        4,
+        9
+      ],
+      "prevRaceName": "宗像特別",
+      "prevRaceGrade": "2勝",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 3,
+      "frame": 3,
+      "name": "プロトポロス",
+      "sire": "War Front",
+      "bms": "Sunday Break",
+      "dam": "",
+      "jockey": "幸英明",
+      "age": "6",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 59.6,
+      "style": "逃げ",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 15,
+      "pastRanks": [
+        15,
+        11,
+        15,
+        12
+      ],
+      "prevRaceName": "オアシスS",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 4,
+      "frame": 4,
+      "name": "アンクルクロス",
+      "sire": "タリスマニック",
+      "bms": "ダンスインザダーク",
+      "dam": "",
+      "jockey": "松若風馬",
+      "age": "5",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 7.1,
+      "style": "差し",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 2,
+      "pastRanks": [
+        2,
+        2,
+        1,
+        7
+      ],
+      "prevRaceName": "鞍馬S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 5,
+      "frame": 4,
+      "name": "アブキールベイ",
+      "sire": "ファインニードル",
+      "bms": "ハーツクライ",
+      "dam": "",
+      "jockey": "西村淳也",
+      "age": "4",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 15.9,
+      "style": "差し",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 12,
+      "pastRanks": [
+        12,
+        13,
+        6,
+        6
+      ],
+      "prevRaceName": "鞍馬S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 6,
+      "frame": 5,
+      "name": "オタルエバー",
+      "sire": "リオンディーズ",
+      "bms": "Redoute's Choice",
+      "dam": "",
+      "jockey": "角田大和",
+      "age": "7",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 29.6,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 6,
+      "pastRanks": [
+        6,
+        14,
+        16,
+        14
+      ],
+      "prevRaceName": "鞍馬S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 7,
+      "frame": 5,
+      "name": "デアヴェローチェ",
+      "sire": "マテラスカイ",
+      "bms": "ミッキーアイル",
+      "dam": "",
+      "jockey": "川田将雅",
+      "age": "3",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 4.7,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        1,
+        4,
+        5
+      ],
+      "prevRaceName": "葵S",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 8,
+      "frame": 6,
+      "name": "アメリカンビキニ",
+      "sire": "American Pharoah",
+      "bms": "Bernardini",
+      "dam": "",
+      "jockey": "酒井学",
+      "age": "4",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 11.9,
+      "style": "逃げ",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        2,
+        8,
+        7
+      ],
+      "prevRaceName": "円山特別ダ",
+      "prevRaceGrade": "2勝",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 9,
+      "frame": 6,
+      "name": "ヨシノイースター",
+      "sire": "ルーラーシップ",
+      "bms": "ゼンノロブロイ",
+      "dam": "",
+      "jockey": "田辺裕信",
+      "age": "8",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 8.4,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 4,
+      "pastRanks": [
+        4,
+        12,
+        5,
+        6
+      ],
+      "prevRaceName": "安土城S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 10,
+      "frame": 7,
+      "name": "サウンドモリアーナ",
+      "sire": "ミッキーアイル",
+      "bms": "ケイムホーム",
+      "dam": "",
+      "jockey": "吉村誠之助",
+      "age": "4",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 14.2,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        1,
+        3,
+        9
+      ],
+      "prevRaceName": "モルガナイト",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 11,
+      "frame": 7,
+      "name": "ヤマニンアルリフラ",
+      "sire": "イスラボニータ",
+      "bms": "スウェプトオーヴァーボード",
+      "dam": "",
+      "jockey": "団野大成",
+      "age": "5",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 12.0,
+      "style": "差し",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 3,
+      "pastRanks": [
+        3,
+        14,
+        3,
+        7
+      ],
+      "prevRaceName": "東京スプリンダ",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 12,
+      "frame": 8,
+      "name": "フリッカージャブ",
+      "sire": "サートゥルナーリア",
+      "bms": "サクラバクシンオー",
+      "dam": "",
+      "jockey": "松山弘平",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 3.6,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        6,
+        1,
+        1
+      ],
+      "prevRaceName": "鞍馬S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    },
+    {
+      "num": 13,
+      "frame": 8,
+      "name": "イツモニコニコ",
+      "sire": "ビッグアーサー",
+      "bms": "ダンスインザダーク",
+      "dam": "",
+      "jockey": "藤懸貴志",
+      "age": "5",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 32.3,
+      "style": "先行",
+      "paceType": "HIGH",
+      "gradeWins": [],
+      "prevRank": 13,
+      "pastRanks": [
+        13,
+        12,
+        1,
+        1
+      ],
+      "prevRaceName": "鞍馬S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1200,
+      "training": ""
+    }
+  ],
+  "trends": {
+    "popularity": [
+      {
+        "label": "1番人気",
+        "val": "フリッカージャブ3.6倍。鞍馬S勝ちの上がり馬だが57.5kgの酷量",
+        "hl": true
+      },
+      {
+        "label": "2番人気",
+        "val": "デアヴェローチェ4.7倍。3歳牝馬53kgで葵S勝ち。斤量の恵み大",
+        "hl": true
+      },
+      {
+        "label": "人気薄妙味",
+        "val": "ジェニファー8番人気だが50kg最軽量＋前走2勝クラス勝ち",
+        "hl": false
+      }
+    ],
+    "popTip": "ハンデ重賞らしく斤量差が鍵。トップハンデ57.5kg（フリッカージャブ・ヤマニンアルリフラ）と最軽量50kg（ジェニファー）で7.5kg差。斤量に恵まれた軽量馬の一発に注意。",
+    "draw": [
+      {
+        "label": "内枠",
+        "val": "小倉芝1200は内枠有利。1-3枠をロスなく先行できる馬 → ランフォーヴァウ、ジェニファー"
+      },
+      {
+        "label": "馬場",
+        "val": "芝良・傷み軽い。先行力と器用な立ち回りが重要",
+        "hl": true
+      }
+    ],
+    "drawTip": "小倉芝1200mは急な3-4コーナーで内をロスなく回れる先行馬が有利。開催序盤で馬場の傷みは軽く、内枠先行勢に展開が向きやすい。外枠の差し・追込は不利。",
+    "style": [
+      {
+        "label": "先行",
+        "val": "馬場想定にベストマッチ → デアヴェローチェ、フリッカージャブ、ジェニファー",
+        "hl": true
+      },
+      {
+        "label": "逃げ",
+        "val": "ハイペースなら残り目 → アメリカンビキニ、プロトポロス"
+      },
+      {
+        "label": "差し・追込",
+        "val": "小倉1200では届きにくい。割引 → アンクルクロス、ヤマニンアルリフラ"
+      }
+    ],
+    "styleTip": "小倉芝1200mの短距離戦は前半から流れが速く、先行して二の脚を使える馬が圧倒的有利。差し・追込は展開が向かないと届かない。先行力のあるデアヴェローチェ・フリッカージャブが中心。",
+    "blood": [
+      {
+        "label": "サートゥルナーリア",
+        "val": "パワースピード兼備。小倉巧者 → フリッカージャブ",
+        "hl": true
+      },
+      {
+        "label": "マテラスカイ／ミッキーアイル",
+        "val": "快速スプリント血統 → デアヴェローチェ、サウンドモリアーナ",
+        "hl": true
+      },
+      {
+        "label": "ロードカナロア／ファインニードル",
+        "val": "短距離王道 → ランフォーヴァウ、アブキールベイ"
+      }
+    ],
+    "bloodTip": "小倉1200の高速スプリント戦は、スピードとパワーを兼ね備えた短距離血統が活きる。フリッカージャブ（サートゥルナーリア）の重厚なスピード、デアヴェローチェ（マテラスカイ）の快速に注目。",
+    "rotation": [
+      {
+        "label": "前走OP好走",
+        "val": "鞍馬S・葵S組が中心",
+        "hl": true,
+        "horses": "フリッカージャブ、デアヴェローチェ、アンクルクロス"
+      },
+      {
+        "label": "上がり馬",
+        "val": "条件戦から勢いで挑戦",
+        "hl": false,
+        "horses": "ジェニファー(2勝クラス勝ち)"
+      }
+    ],
+    "rotationTip": "前走OP特別（鞍馬S・安土城S・モルガナイトS）組が中心。鞍馬Sはフリッカージャブが勝ち、アンクルクロス2着。デアヴェローチェは3歳限定の葵Sを制しての古馬初対戦。",
+    "rotationHorses": [
+      {
+        "name": "デアヴェローチェ",
+        "label": "前走葵S(G3)1着・3歳53kg"
+      },
+      {
+        "name": "フリッカージャブ",
+        "label": "前走鞍馬S(OP)1着・トップハンデ57.5kg"
+      },
+      {
+        "name": "ジェニファー",
+        "label": "前走宗像特別(2勝)1着・最軽量50kg"
+      }
+    ],
+    "pickup": {
+      "title": "重要データ×出走馬マッチング",
+      "horses": [
+        {
+          "name": "デアヴェローチェ",
+          "note": "🏆3歳牝馬53kgの斤量利。葵S勝ちの勢いと先行力。小倉1200の馬場に脚質が合致"
+        },
+        {
+          "name": "フリッカージャブ",
+          "note": "📊鞍馬S勝ちの1番人気。サートゥルナーリア産駒のパワースピード。ただし57.5kg酷量が課題"
+        },
+        {
+          "name": "ジェニファー",
+          "note": "📊50kg最軽量×前走2勝クラス勝ち×先行力。8番人気の妙味。内枠2番も好材料"
+        },
+        {
+          "name": "アメリカンビキニ",
+          "note": "📊ダート実績馬だが51kg軽量。逃げてハイペースなら残り目あり"
+        }
+      ]
+    }
+  },
+  "result": null,
+  "review": null,
+  "verification": null,
+  "simulation": {
+    "n": 1000,
+    "sigma": 8,
+    "method": "モンテカルロ法（Box-Muller正規乱数、σ=8）",
+    "note": "オッズを土台に、小倉芝1200の馬場傾向（先行/器用さ/内枠有利）と斤量差を補正。上位2頭が抜けた展開。",
+    "results": [
+      {
+        "num": 7,
+        "name": "デアヴェローチェ",
+        "pop": 0,
+        "tan": 4.7,
+        "style": "先行",
+        "frame": 5,
+        "score": 71.8,
+        "winPct": 23.7,
+        "place2Pct": 39.2,
+        "place3Pct": 52.8,
+        "avgRank": 4.2,
+        "ev": 0
+      },
+      {
+        "num": 12,
+        "name": "フリッカージャブ",
+        "pop": 0,
+        "tan": 3.6,
+        "style": "先行",
+        "frame": 8,
+        "score": 71.4,
+        "winPct": 20.3,
+        "place2Pct": 36.7,
+        "place3Pct": 49.8,
+        "avgRank": 4.3,
+        "ev": 0
+      },
+      {
+        "num": 2,
+        "name": "ジェニファー",
+        "pop": 0,
+        "tan": 15.2,
+        "style": "先行",
+        "frame": 2,
+        "score": 68.7,
+        "winPct": 11.5,
+        "place2Pct": 25.1,
+        "place3Pct": 37.1,
+        "avgRank": 5.4,
+        "ev": 0
+      },
+      {
+        "num": 1,
+        "name": "ランフォーヴァウ",
+        "pop": 0,
+        "tan": 17.3,
+        "style": "先行",
+        "frame": 1,
+        "score": 66.9,
+        "winPct": 7.4,
+        "place2Pct": 15.9,
+        "place3Pct": 25.5,
+        "avgRank": 6.5,
+        "ev": 0
+      },
+      {
+        "num": 8,
+        "name": "アメリカンビキニ",
+        "pop": 0,
+        "tan": 11.9,
+        "style": "逃げ",
+        "frame": 6,
+        "score": 66.9,
+        "winPct": 8.1,
+        "place2Pct": 16.2,
+        "place3Pct": 24.2,
+        "avgRank": 6.6,
+        "ev": 0
+      },
+      {
+        "num": 10,
+        "name": "サウンドモリアーナ",
+        "pop": 0,
+        "tan": 14.2,
+        "style": "先行",
+        "frame": 7,
+        "score": 65.4,
+        "winPct": 6.3,
+        "place2Pct": 13.5,
+        "place3Pct": 21.0,
+        "avgRank": 6.8,
+        "ev": 0
+      },
+      {
+        "num": 9,
+        "name": "ヨシノイースター",
+        "pop": 0,
+        "tan": 8.4,
+        "style": "先行",
+        "frame": 6,
+        "score": 64.1,
+        "winPct": 4.3,
+        "place2Pct": 10.3,
+        "place3Pct": 18.4,
+        "avgRank": 7.4,
+        "ev": 0
+      },
+      {
+        "num": 4,
+        "name": "アンクルクロス",
+        "pop": 0,
+        "tan": 7.1,
+        "style": "差し",
+        "frame": 4,
+        "score": 63.3,
+        "winPct": 4.1,
+        "place2Pct": 9.7,
+        "place3Pct": 15.3,
+        "avgRank": 7.7,
+        "ev": 0
+      },
+      {
+        "num": 13,
+        "name": "イツモニコニコ",
+        "pop": 0,
+        "tan": 32.3,
+        "style": "先行",
+        "frame": 8,
+        "score": 63.0,
+        "winPct": 3.5,
+        "place2Pct": 8.0,
+        "place3Pct": 13.6,
+        "avgRank": 7.8,
+        "ev": 0
+      },
+      {
+        "num": 3,
+        "name": "プロトポロス",
+        "pop": 0,
+        "tan": 59.6,
+        "style": "逃げ",
+        "frame": 3,
+        "score": 62.9,
+        "winPct": 3.9,
+        "place2Pct": 7.7,
+        "place3Pct": 13.3,
+        "avgRank": 7.9,
+        "ev": 0
+      },
+      {
+        "num": 6,
+        "name": "オタルエバー",
+        "pop": 0,
+        "tan": 29.6,
+        "style": "先行",
+        "frame": 5,
+        "score": 62.2,
+        "winPct": 2.7,
+        "place2Pct": 7.0,
+        "place3Pct": 10.9,
+        "avgRank": 8.3,
+        "ev": 0
+      },
+      {
+        "num": 11,
+        "name": "ヤマニンアルリフラ",
+        "pop": 0,
+        "tan": 12.0,
+        "style": "差し",
+        "frame": 7,
+        "score": 60.9,
+        "winPct": 2.2,
+        "place2Pct": 6.5,
+        "place3Pct": 10.8,
+        "avgRank": 8.7,
+        "ev": 0
+      },
+      {
+        "num": 5,
+        "name": "アブキールベイ",
+        "pop": 0,
+        "tan": 15.9,
+        "style": "差し",
+        "frame": 4,
+        "score": 59.6,
+        "winPct": 2.0,
+        "place2Pct": 4.2,
+        "place3Pct": 7.3,
+        "avgRank": 9.3,
+        "ev": 0
+      }
+    ]
+  },
+  "prevDayAnalysis": {
+    "date": "2026/7/5（当日）",
+    "trackCondForecast": "良（先行・内枠有利）",
+    "summary": "小倉は開催4日目で芝の傷みはまだ軽く、芝良・クッション値8.7の標準やや速い馬場。先行力と内枠での器用な立ち回りが重要。芝1200mの短距離戦では、スタートを決めて二の脚で好位を取れる馬が有利。差し・追込は展開に左右されやすく、人気でも過信は禁物。",
+    "races": [],
+    "conditionChange": [
+      {
+        "item": "馬場状態",
+        "good": "先行・内枠有利。器用な立ち回り",
+        "heavy": "傷み軽く前有利。差しは届きにくい"
+      },
+      {
+        "item": "脚質",
+        "good": "先行して二の脚を使える馬",
+        "heavy": "後方一気の追込は割引"
+      },
+      {
+        "item": "枠順",
+        "good": "内枠(1-3枠)をロスなく先行",
+        "heavy": "外枠の差し馬はコーナーロス"
+      },
+      {
+        "item": "斤量",
+        "good": "軽ハンデ50-53kg",
+        "heavy": "57.5kgのトップハンデ勢は試練"
+      }
+    ],
+    "horseMatrix": [
+      {
+        "name": "デアヴェローチェ",
+        "num": 7,
+        "pop": 0,
+        "frame": "5枠",
+        "style": "先行",
+        "heavy": "◎",
+        "sashi": "○",
+        "data": "3歳53kg×葵S勝ち×先行。馬場ベストマッチ",
+        "rank": "S"
+      },
+      {
+        "name": "フリッカージャブ",
+        "num": 12,
+        "pop": 0,
+        "frame": "8枠",
+        "style": "先行",
+        "heavy": "◎",
+        "sashi": "○",
+        "data": "鞍馬S勝ち。57.5kgと外枠だけ課題",
+        "rank": "A"
+      },
+      {
+        "name": "ジェニファー",
+        "num": 2,
+        "pop": 0,
+        "frame": "2枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "50kg最軽量×内枠×前走2勝勝ち。妙味",
+        "rank": "A"
+      },
+      {
+        "name": "ランフォーヴァウ",
+        "num": 1,
+        "pop": 0,
+        "frame": "1枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "1枠先行。谷川岳S勝ちの勢い",
+        "rank": "B"
+      },
+      {
+        "name": "アメリカンビキニ",
+        "num": 8,
+        "pop": 0,
+        "frame": "6枠",
+        "style": "逃げ",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "51kg軽量×逃げ。ハイペース残り目",
+        "rank": "B"
+      },
+      {
+        "name": "サウンドモリアーナ",
+        "num": 10,
+        "pop": 0,
+        "frame": "7枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "モルガナイトS勝ち。ミッキーアイル産駒",
+        "rank": "B"
+      },
+      {
+        "name": "ヨシノイースター",
+        "num": 9,
+        "pop": 0,
+        "frame": "6枠",
+        "style": "先行",
+        "heavy": "△",
+        "sashi": "△",
+        "data": "58kgトップハンデ×8歳。地力はあるが酷量",
+        "rank": "C"
+      },
+      {
+        "name": "アンクルクロス",
+        "num": 4,
+        "pop": 0,
+        "frame": "4枠",
+        "style": "差し",
+        "heavy": "△",
+        "sashi": "▲",
+        "data": "3番人気だが差し脚質。小倉1200は割引",
+        "rank": "C"
+      }
+    ],
+    "pickupHorses": [
+      {
+        "name": "デアヴェローチェ",
+        "num": 7,
+        "pop": 0,
+        "odds": 4.7,
+        "label": "本命",
+        "color": "#1e5fa8",
+        "reasons": [
+          "3歳牝馬53kgの斤量利は絶大",
+          "葵S(G3)勝ちの勢いと先行力",
+          "小倉芝1200の先行有利馬場に脚質が完全合致",
+          "川田将雅とのコンビ"
+        ]
+      },
+      {
+        "name": "ジェニファー",
+        "num": 2,
+        "pop": 0,
+        "odds": 15.2,
+        "label": "穴の本命",
+        "color": "#c8a84b",
+        "reasons": [
+          "50kg最軽量ハンデの恵み",
+          "前走宗像特別(2勝)を先行押し切りで完勝",
+          "内枠2番をロスなく先行できる",
+          "8番人気で配当妙味大"
+        ]
+      },
+      {
+        "name": "アメリカンビキニ",
+        "num": 8,
+        "pop": 0,
+        "odds": 11.9,
+        "label": "逃げ穴",
+        "color": "#2fa54a",
+        "reasons": [
+          "51kgの軽量ハンデ",
+          "逃げてハイペースに持ち込めば残り目",
+          "ダート実績馬のパワー"
+        ]
+      }
+    ],
+    "dangerHorses": [
+      {
+        "name": "フリッカージャブ",
+        "num": 12,
+        "pop": 0,
+        "odds": 3.6,
+        "note": "1番人気だが57.5kgのトップハンデと8枠外が課題。鞍馬Sは57kgで勝ったが、さらに斤量増と外枠で今回は割引材料。過信は禁物で、軸なら相手も手広く。"
+      },
+      {
+        "name": "アンクルクロス",
+        "num": 4,
+        "pop": 0,
+        "odds": 7.1,
+        "note": "3番人気だが差し脚質。小倉芝1200の先行有利馬場では展開待ちになりやすく、人気ほど信頼できない。鞍馬S2着は評価できるが位置取りが課題。"
+      }
+    ],
+    "bettingStrategy": {
+      "axis": "デアヴェローチェ",
+      "axisReason": "3歳53kg×葵S勝ち×先行。馬場に完全合致",
+      "counter": "フリッカージャブ",
+      "counterReason": "鞍馬S勝ちの実力。57.5kgでも能力上位",
+      "hole": "ジェニファー",
+      "holeReason": "50kg最軽量×内枠×先行。8番人気の妙味",
+      "bighole": "アメリカンビキニ",
+      "bigholeReason": "51kg軽量×逃げでハイペース残り目"
+    },
+    "impactOnRace": [
+      "🟢 先行・内枠有利 → デアヴェローチェ・ジェニファー・ランフォーヴァウに追い風",
+      "🟢 軽ハンデ馬が浮上 → ジェニファー(50kg)・アメリカンビキニ(51kg)・デアヴェローチェ(53kg)",
+      "🔴 トップハンデ57.5kgは試練 → フリッカージャブ・ヤマニンアルリフラ",
+      "🔴 差し・追込は展開待ち → アンクルクロス(3番人気)・ヤマニンアルリフラは割引"
+    ]
+  }
+}
