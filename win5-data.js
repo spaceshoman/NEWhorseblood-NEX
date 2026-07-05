@@ -221,7 +221,7 @@ window.KB_WIN5 = {
       "course": "芝1200m",
       "class": "G3",
       "raceNo": "11R",
-      "raceId": null,
+      "raceId": "kitakyushu2026",
       "tip": "フリッカージャブ・デアヴェローチェの2強。小倉芝良の先行・器用さ重視で、この2頭の先行力は馬場に合う。2-3頭。",
       "confidence": "C",
       "top": [

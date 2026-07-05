@@ -33,22 +33,22 @@ window.KB = (function () {
   // 次走（ホームNEXT RACE 用）— 明日(6/21) 2レース同日開催
   const nextRaces = [
     {
-      id: "hakodateKinen2026",
+      id: "kitakyushu2026",
       grade: "G3",
-      name: "第62回 函館記念",
-      short: "函館記念",
-      en: "HAKODATE KINEN",
-      date: "2026.6.28",
+      name: "第61回 北九州記念",
+      short: "北九州記念",
+      en: "KITAKYUSHU KINEN",
+      date: "2026.7.5",
       dow: "日",
-      venue: "函館",
-      course: "芝2000m",
-      post: "15:20",
-      emoji: "🐻",
-      tagline: "波乱必至のハンデ重賞",
+      venue: "小倉",
+      course: "芝1200m",
+      post: "15:45",
+      emoji: "⚡",
+      tagline: "夏の短距離ハンデ重賞",
       isLive: true,
     },
   ];
-  // 旧API互換：nextRace は先頭（函館記念）
+  // 旧API互換：nextRace は先頭（北九州記念）
   const nextRace = nextRaces[0];
 
   // 出走馬（実データ）
@@ -287,7 +287,8 @@ window.KB = (function () {
 
   // 重賞カレンダー（予想ホーム用）
   const calendar = [
-    { id: "hakodateKinen2026", grade: "G3", name: "函館記念", date: "6.28", dow: "日", venue: "函館", course: "芝2000m", emoji: "🐻", status: "live", note: "波乱必至のハンデ重賞", field: 15 },
+    { id: "kitakyushu2026", grade: "G3", name: "北九州記念", date: "7.5", dow: "日", venue: "小倉", course: "芝1200m", emoji: "⚡", status: "live", note: "夏の短距離ハンデ重賞", field: 13 },
+    { id: "hakodateKinen2026", grade: "G3", name: "函館記念", date: "6.28", dow: "日", venue: "函館", course: "芝2000m", emoji: "🐻", status: "done", note: "波乱必至のハンデ重賞", field: 15, win: "ファウストラーゼン" },
     { id: "shirasagiS2026", grade: "G3", name: "しらさぎS", date: "6.21", dow: "日", venue: "阪神", course: "芝1600m", emoji: "🦢", status: "done", note: "サマーマイルシリーズ初戦", field: 18 },
     { id: "fuchuFillies2026", grade: "G2", name: "府中牝馬S", date: "6.21", dow: "日", venue: "東京", course: "芝1800m", emoji: "🌸", status: "done", note: "牝馬限定G2", field: 16 },
     { id: "sprinters2026", grade: "G1", name: "スプリンターズS", date: "9.27", dow: "日", venue: "中山", course: "芝1200m", emoji: "💨", status: "soon", note: "秋の短距離王決定戦", field: 0 },

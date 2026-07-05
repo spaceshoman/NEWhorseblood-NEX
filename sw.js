@@ -1,11 +1,11 @@
 /* 血統くん refined PWA service worker */
-const CACHE = "keitokun-v11";
+const CACHE = "keitokun-v12";
 const ASSETS = [
   ".", "index.html", "血統くん.html", "manifest.json",
   "data.js", "theme.js", "tweaks-panel.jsx", "ui.jsx", "home.jsx",
   "racedetail.jsx", "diagnosis.jsx", "diagnosis-eyes.jsx", "review.jsx",
   "race-loader.js", "race-panel.jsx",
-  "shirasagiS2026.json", "fuchuFillies2026.json", "hakodateKinen2026.json",
+  "shirasagiS2026.json", "fuchuFillies2026.json", "hakodateKinen2026.json", "kitakyushu2026.json",
   "win5-data.js", "win5.jsx",
   "analysis.jsx", "extras.jsx", "app.jsx",
   "icon-192.png", "icon-512.png"
