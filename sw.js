@@ -1,5 +1,5 @@
 /* 血統くん refined PWA service worker */
-const CACHE = "keitokun-v14";
+const CACHE = "keitokun-v15";
 const ASSETS = [
   ".", "index.html", "血統くん.html", "manifest.json",
   "data.js", "theme.js", "tweaks-panel.jsx", "ui.jsx", "home.jsx",
