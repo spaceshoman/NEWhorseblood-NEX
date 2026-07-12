@@ -1,0 +1,1050 @@
+{
+  "id": "tanabata2026",
+  "race_id": "",
+  "race_name": "第62回 七夕賞",
+  "date": "2026/7/12",
+  "venue": "福島",
+  "course": "芝2000m",
+  "expectedPace": "BOTH",
+  "trackCond": "稍重",
+  "frameBonus": {},
+  "runners": [
+    {
+      "num": 1,
+      "frame": 1,
+      "name": "ボーンディスウェイ",
+      "sire": "ハーツクライ",
+      "bms": "Platini",
+      "dam": "",
+      "jockey": "丸山元気",
+      "age": "7",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 40.4,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 11,
+      "pastRanks": [
+        11,
+        6,
+        9,
+        8
+      ],
+      "prevRaceName": "目黒記念",
+      "prevRaceGrade": "G2",
+      "prevRaceDist": 2500,
+      "training": ""
+    },
+    {
+      "num": 2,
+      "frame": 1,
+      "name": "コントラポスト",
+      "sire": "ルーラーシップ",
+      "bms": "フジキセキ",
+      "dam": "",
+      "jockey": "菊沢一樹",
+      "age": "6",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 17.3,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 5,
+      "pastRanks": [
+        5,
+        5,
+        3,
+        2
+      ],
+      "prevRaceName": "ジューンS",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 3,
+      "frame": 2,
+      "name": "ショウナンマグマ",
+      "sire": "ザファクター",
+      "bms": "ステイゴールド",
+      "dam": "",
+      "jockey": "三浦皇成",
+      "age": "7",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 105.6,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 12,
+      "pastRanks": [
+        12,
+        12,
+        13,
+        4
+      ],
+      "prevRaceName": "都大路S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 4,
+      "frame": 2,
+      "name": "カラマティアノス",
+      "sire": "レイデオロ",
+      "bms": "ハーツクライ",
+      "dam": "",
+      "jockey": "岩田康誠",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 4.5,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 6,
+      "pastRanks": [
+        6,
+        2,
+        1,
+        12
+      ],
+      "prevRaceName": "エプソムC",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 5,
+      "frame": 3,
+      "name": "オーロラエックス",
+      "sire": "サトノダイヤモンド",
+      "bms": "Galileo",
+      "dam": "",
+      "jockey": "坂井瑠星",
+      "age": "5",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 27.8,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 6,
+      "pastRanks": [
+        6,
+        9,
+        16,
+        1
+      ],
+      "prevRaceName": "都大路S",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 6,
+      "frame": 3,
+      "name": "マイネルモーント",
+      "sire": "ゴールドシップ",
+      "bms": "ロージズインメイ",
+      "dam": "",
+      "jockey": "石川裕紀人",
+      "age": "6",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 13.5,
+      "style": "追込",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 12,
+      "pastRanks": [
+        12,
+        4,
+        4,
+        8
+      ],
+      "prevRaceName": "エプソムC",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 7,
+      "frame": 4,
+      "name": "メリオーレム",
+      "sire": "シュヴァルグラン",
+      "bms": "Starspangledbanner",
+      "dam": "",
+      "jockey": "M.デムーロ",
+      "age": "5",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 19.4,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 10,
+      "pastRanks": [
+        10,
+        4,
+        5,
+        10
+      ],
+      "prevRaceName": "ジューンS",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 8,
+      "frame": 4,
+      "name": "クリスマスパレード",
+      "sire": "キタサンブラック",
+      "bms": "Blame",
+      "dam": "",
+      "jockey": "杉原誠人",
+      "age": "5",
+      "sex": "牝",
+      "pop": 0,
+      "tan": 36.3,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 15,
+      "pastRanks": [
+        15,
+        16,
+        6,
+        9
+      ],
+      "prevRaceName": "日経賞",
+      "prevRaceGrade": "G2",
+      "prevRaceDist": 2500,
+      "training": ""
+    },
+    {
+      "num": 9,
+      "frame": 5,
+      "name": "オニャンコポン",
+      "sire": "エイシンフラッシュ",
+      "bms": "ヴィクトワールピサ",
+      "dam": "",
+      "jockey": "吉田豊",
+      "age": "7",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 41.3,
+      "style": "追込",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 12,
+      "pastRanks": [
+        12,
+        15,
+        11,
+        11
+      ],
+      "prevRaceName": "函館記念",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 10,
+      "frame": 5,
+      "name": "センツブラッド",
+      "sire": "ルーラーシップ",
+      "bms": "ハービンジャー",
+      "dam": "",
+      "jockey": "原優介",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 13.3,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 10,
+      "pastRanks": [
+        10,
+        14,
+        2,
+        7
+      ],
+      "prevRaceName": "エプソムC",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 11,
+      "frame": 6,
+      "name": "アスクナイスショー",
+      "sire": "シルバーステート",
+      "bms": "アドマイヤムーン",
+      "dam": "",
+      "jockey": "田辺裕信",
+      "age": "5",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 5.5,
+      "style": "逃げ",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 10,
+      "pastRanks": [
+        10,
+        1,
+        12,
+        2
+      ],
+      "prevRaceName": "日経賞",
+      "prevRaceGrade": "G2",
+      "prevRaceDist": 2500,
+      "training": ""
+    },
+    {
+      "num": 12,
+      "frame": 6,
+      "name": "リカンカブール",
+      "sire": "シルバーステート",
+      "bms": "Zoffany",
+      "dam": "",
+      "jockey": "荻野極",
+      "age": "7",
+      "sex": "せん",
+      "pop": 0,
+      "tan": 23.5,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 6,
+      "pastRanks": [
+        6,
+        6,
+        7,
+        6
+      ],
+      "prevRaceName": "小倉大賞典",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 1800,
+      "training": ""
+    },
+    {
+      "num": 13,
+      "frame": 7,
+      "name": "バトルボーン",
+      "sire": "シルバーステート",
+      "bms": "ジャングルポケット",
+      "dam": "",
+      "jockey": "戸崎圭太",
+      "age": "7",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 6.6,
+      "style": "逃げ",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 3,
+      "pastRanks": [
+        3,
+        3,
+        8,
+        1
+      ],
+      "prevRaceName": "メトロポリタンS",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 2400,
+      "training": ""
+    },
+    {
+      "num": 14,
+      "frame": 7,
+      "name": "オールナット",
+      "sire": "サトノダイヤモンド",
+      "bms": "フレンチデピュティ",
+      "dam": "",
+      "jockey": "西村淳也",
+      "age": "5",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 32.9,
+      "style": "差し",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 13,
+      "pastRanks": [
+        13,
+        10,
+        1,
+        6
+      ],
+      "prevRaceName": "日経新春杯",
+      "prevRaceGrade": "G2",
+      "prevRaceDist": 2400,
+      "training": ""
+    },
+    {
+      "num": 15,
+      "frame": 8,
+      "name": "ヤマニンブークリエ",
+      "sire": "キタサンブラック",
+      "bms": "チチカステナンゴ",
+      "dam": "",
+      "jockey": "横山典弘",
+      "age": "4",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 9.0,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 5,
+      "pastRanks": [
+        5,
+        5,
+        7,
+        16
+      ],
+      "prevRaceName": "新潟大賞典",
+      "prevRaceGrade": "G3",
+      "prevRaceDist": 2000,
+      "training": ""
+    },
+    {
+      "num": 16,
+      "frame": 8,
+      "name": "サヴォーナ",
+      "sire": "キズナ",
+      "bms": "スニッツェル",
+      "dam": "",
+      "jockey": "池添謙一",
+      "age": "6",
+      "sex": "牡",
+      "pop": 0,
+      "tan": 7.4,
+      "style": "先行",
+      "paceType": "BOTH",
+      "gradeWins": [],
+      "prevRank": 1,
+      "pastRanks": [
+        1,
+        8,
+        4,
+        4
+      ],
+      "prevRaceName": "福島民報杯",
+      "prevRaceGrade": "OP",
+      "prevRaceDist": 2000,
+      "training": ""
+    }
+  ],
+  "trends": {
+    "popularity": [
+      {
+        "label": "波乱度",
+        "val": "荒れるハンデG3の代名詞。ただし近2年は2番人気→1番人気で決着",
+        "hl": false
+      },
+      {
+        "label": "今年の構図",
+        "val": "好走率トップの「斤量今回増」に該当馬ゼロ。データ的に波乱の雰囲気",
+        "hl": true
+      },
+      {
+        "label": "人気馬の評価",
+        "val": "1〜3番人気（カラマティアノス・アスクナイスショー・バトルボーン）が揃ってデータ条件を外す",
+        "hl": true
+      }
+    ],
+    "popTip": "JRA-VANデータでは「斤量今回増」が最良（勝率13.3%・複勝33.3%）だが、今年は該当馬なし。さらに人気上位3頭が揃ってデータの好走条件から外れる異例の構図で、波乱含み。",
+    "draw": [
+      {
+        "label": "当日馬場",
+        "val": "福島芝稍重・小雨・クッション値8.6（標準）。開催6日目で内は荒れ始め",
+        "hl": true
+      },
+      {
+        "label": "同日同条件",
+        "val": "福島3R（芝2000m稍重）は1着9番手・2着7番手・4着10番手・5着13番手。逃げ馬は3着まで",
+        "hl": true
+      }
+    ],
+    "drawTip": "同日の福島3R（同じ芝2000m・稍重）では、中団から早めに押し上げた馬が1-2着を占め、逃げ切りを図った馬は3着どまり。後方13番手からも5着に届いており、前々で粘るより「中団から動ける持続力型」が有利な馬場。",
+    "style": [
+      {
+        "label": "中団〜好位から動ける",
+        "val": "当日バイアスの本線 → センツブラッド、コントラポスト",
+        "hl": true
+      },
+      {
+        "label": "差し・追込",
+        "val": "届く馬場。決め手のある馬は浮上 → マイネルモーント"
+      },
+      {
+        "label": "逃げ・前々",
+        "val": "3着どまりの傾向。データも4角1番手は【0-0-0-3】→ アスクナイスショー、バトルボーンは割引",
+        "hl": true
+      }
+    ],
+    "styleTip": "当日の福島芝2000mは、逃げ・前々で粘り込むより、中団から4コーナーで押し上げる持続力型が優勢。JRA-VANデータの「前走4角2〜7番手」条件とも完全に整合しており、脚質の取捨がそのまま明暗を分ける。",
+    "blood": [
+      {
+        "label": "ルーラーシップ",
+        "val": "パワー型・道悪巧者。稍重の福島にベスト → センツブラッド、コントラポスト",
+        "hl": true
+      },
+      {
+        "label": "ゴールドシップ",
+        "val": "言わずと知れた道悪の鬼。福島民報杯4着の実績 → マイネルモーント",
+        "hl": true
+      },
+      {
+        "label": "キズナ",
+        "val": "パワーと持続力。福島民報杯1着 → サヴォーナ"
+      }
+    ],
+    "bloodTip": "小雨で芝稍重、パワーが要る馬場。ルーラーシップ産駒（センツブラッド・コントラポスト）とゴールドシップ産駒（マイネルモーント）の道悪適性が光る。上位2頭がともにルーラーシップ産駒なのは偶然ではない。",
+    "rotation": [
+      {
+        "label": "斤量今回減×4角2〜7番手",
+        "val": "【4-2-6-26】複勝31.6%・単回収334円。今回減の好走が全集中",
+        "hl": true,
+        "horses": "コントラポスト、センツブラッド、ショウナンマグマ"
+      },
+      {
+        "label": "斤量増減なし",
+        "val": "【2-3-3-47】複勝14.5%と不振ゾーン。前走1-2番人気でなければ強調不可",
+        "hl": true,
+        "horses": "カラマティアノス、サヴォーナ、ヤマニンブークリエ ほか"
+      },
+      {
+        "label": "前走4角1番手",
+        "val": "【0-0-0-3】全滅。逃げ切り型は七夕賞では消える",
+        "hl": true,
+        "horses": "アスクナイスショー、バトルボーン"
+      },
+      {
+        "label": "七夕賞出走歴あり",
+        "val": "【1-1-0-26】と苦戦。初出走が得策",
+        "hl": false,
+        "horses": "ショウナンマグマ（2回出走）"
+      }
+    ],
+    "rotationTip": "七夕賞データの核心は「斤量今回減 × 前走4角2〜7番手 × 距離延長or短縮」。この3条件を全て満たすのはコントラポスト・センツブラッド・ショウナンマグマの3頭のみ。うちショウナンマグマは七夕賞出走歴【1-1-0-26】で割引となり、実質2頭に絞られる。",
+    "rotationHorses": [
+      {
+        "name": "センツブラッド",
+        "label": "斤量-1kg×前走4角2番手×距離延長×七夕賞初出走＝完全合致"
+      },
+      {
+        "name": "コントラポスト",
+        "label": "斤量-2kg×前走4角3番手×距離延長×七夕賞初出走＝完全合致"
+      },
+      {
+        "name": "ショウナンマグマ",
+        "label": "3条件は満たすが七夕賞2回出走で割引"
+      }
+    ],
+    "pickup": {
+      "title": "重要データ×出走馬マッチング",
+      "horses": [
+        {
+          "name": "センツブラッド",
+          "note": "🏆データ完全合致。ルーラーシップ×ハービンジャーの道悪パワー血統。前走4角2番手で当日馬場にも合致。鳴尾記念2着の地力"
+        },
+        {
+          "name": "コントラポスト",
+          "note": "🏆データ完全合致。ルーラーシップ産駒。中山ディセンバーS（重）5着の道悪実績、京成杯AH3着の地力"
+        },
+        {
+          "name": "マイネルモーント",
+          "note": "📊データ条件は外れるが、ゴールドシップ産駒の道悪適性と福島民報杯4着。前走上がり33.2の決め手で当日の差し馬場に合致"
+        },
+        {
+          "name": "サヴォーナ",
+          "note": "📊前走福島民報杯1着の福島2000m巧者。ただし斤量増減なし・58kgでデータ的には強調しづらい"
+        },
+        {
+          "name": "ショウナンマグマ",
+          "note": "💰データ3条件を満たす唯一の大穴（16番人気）。七夕賞出走歴のみが減点材料"
+        }
+      ]
+    }
+  },
+  "result": null,
+  "review": null,
+  "verification": null,
+  "simulation": {
+    "n": 1000,
+    "sigma": 10,
+    "method": "モンテカルロ法（Box-Muller正規乱数、σ=10）",
+    "note": "オッズを土台に、JRA-VAN七夕賞データ（斤量増減×前走4角通過順）と当日馬場（福島3R芝2000m稍重の実バイアス）、道悪血統を補正。荒れるハンデG3のためσを大きめに設定。",
+    "results": [
+      {
+        "num": 10,
+        "name": "センツブラッド",
+        "pop": 0,
+        "tan": 13.3,
+        "style": "先行",
+        "frame": 5,
+        "score": 69.6,
+        "winPct": 21.9,
+        "place2Pct": 38.5,
+        "place3Pct": 48.8,
+        "avgRank": 4.7,
+        "ev": 0
+      },
+      {
+        "num": 2,
+        "name": "コントラポスト",
+        "pop": 0,
+        "tan": 17.3,
+        "style": "先行",
+        "frame": 1,
+        "score": 68.9,
+        "winPct": 20.4,
+        "place2Pct": 33.0,
+        "place3Pct": 44.3,
+        "avgRank": 5.2,
+        "ev": 0
+      },
+      {
+        "num": 16,
+        "name": "サヴォーナ",
+        "pop": 0,
+        "tan": 7.4,
+        "style": "先行",
+        "frame": 8,
+        "score": 63.6,
+        "winPct": 8.1,
+        "place2Pct": 16.0,
+        "place3Pct": 25.7,
+        "avgRank": 7.3,
+        "ev": 0
+      },
+      {
+        "num": 6,
+        "name": "マイネルモーント",
+        "pop": 0,
+        "tan": 13.5,
+        "style": "追込",
+        "frame": 3,
+        "score": 62.5,
+        "winPct": 8.0,
+        "place2Pct": 15.9,
+        "place3Pct": 23.3,
+        "avgRank": 7.6,
+        "ev": 0
+      },
+      {
+        "num": 15,
+        "name": "ヤマニンブークリエ",
+        "pop": 0,
+        "tan": 9.0,
+        "style": "先行",
+        "frame": 8,
+        "score": 61.9,
+        "winPct": 7.2,
+        "place2Pct": 13.4,
+        "place3Pct": 19.8,
+        "avgRank": 7.8,
+        "ev": 0
+      },
+      {
+        "num": 4,
+        "name": "カラマティアノス",
+        "pop": 0,
+        "tan": 4.5,
+        "style": "先行",
+        "frame": 2,
+        "score": 61.0,
+        "winPct": 5.0,
+        "place2Pct": 10.0,
+        "place3Pct": 16.9,
+        "avgRank": 8.2,
+        "ev": 0
+      },
+      {
+        "num": 3,
+        "name": "ショウナンマグマ",
+        "pop": 0,
+        "tan": 105.6,
+        "style": "先行",
+        "frame": 2,
+        "score": 60.7,
+        "winPct": 4.7,
+        "place2Pct": 11.8,
+        "place3Pct": 18.5,
+        "avgRank": 8.4,
+        "ev": 0
+      },
+      {
+        "num": 11,
+        "name": "アスクナイスショー",
+        "pop": 0,
+        "tan": 5.5,
+        "style": "逃げ",
+        "frame": 6,
+        "score": 59.5,
+        "winPct": 3.6,
+        "place2Pct": 8.5,
+        "place3Pct": 15.0,
+        "avgRank": 8.9,
+        "ev": 0
+      },
+      {
+        "num": 12,
+        "name": "リカンカブール",
+        "pop": 0,
+        "tan": 23.5,
+        "style": "先行",
+        "frame": 6,
+        "score": 59.1,
+        "winPct": 3.1,
+        "place2Pct": 8.3,
+        "place3Pct": 13.6,
+        "avgRank": 9.1,
+        "ev": 0
+      },
+      {
+        "num": 13,
+        "name": "バトルボーン",
+        "pop": 0,
+        "tan": 6.6,
+        "style": "逃げ",
+        "frame": 7,
+        "score": 58.6,
+        "winPct": 3.8,
+        "place2Pct": 9.0,
+        "place3Pct": 13.3,
+        "avgRank": 9.2,
+        "ev": 0
+      },
+      {
+        "num": 8,
+        "name": "クリスマスパレード",
+        "pop": 0,
+        "tan": 36.3,
+        "style": "差し",
+        "frame": 4,
+        "score": 58.3,
+        "winPct": 2.9,
+        "place2Pct": 7.5,
+        "place3Pct": 12.8,
+        "avgRank": 9.6,
+        "ev": 0
+      },
+      {
+        "num": 5,
+        "name": "オーロラエックス",
+        "pop": 0,
+        "tan": 27.8,
+        "style": "差し",
+        "frame": 3,
+        "score": 58.3,
+        "winPct": 2.9,
+        "place2Pct": 6.7,
+        "place3Pct": 11.9,
+        "avgRank": 9.2,
+        "ev": 0
+      },
+      {
+        "num": 1,
+        "name": "ボーンディスウェイ",
+        "pop": 0,
+        "tan": 40.4,
+        "style": "差し",
+        "frame": 1,
+        "score": 57.1,
+        "winPct": 2.0,
+        "place2Pct": 6.2,
+        "place3Pct": 8.8,
+        "avgRank": 10.2,
+        "ev": 0
+      },
+      {
+        "num": 7,
+        "name": "メリオーレム",
+        "pop": 0,
+        "tan": 19.4,
+        "style": "差し",
+        "frame": 4,
+        "score": 56.6,
+        "winPct": 2.4,
+        "place2Pct": 5.4,
+        "place3Pct": 10.4,
+        "avgRank": 9.9,
+        "ev": 0
+      },
+      {
+        "num": 14,
+        "name": "オールナット",
+        "pop": 0,
+        "tan": 32.9,
+        "style": "差し",
+        "frame": 7,
+        "score": 56.4,
+        "winPct": 2.3,
+        "place2Pct": 5.3,
+        "place3Pct": 8.7,
+        "avgRank": 10.2,
+        "ev": 0
+      },
+      {
+        "num": 9,
+        "name": "オニャンコポン",
+        "pop": 0,
+        "tan": 41.3,
+        "style": "追込",
+        "frame": 5,
+        "score": 56.0,
+        "winPct": 1.7,
+        "place2Pct": 4.5,
+        "place3Pct": 8.2,
+        "avgRank": 10.5,
+        "ev": 0
+      }
+    ]
+  },
+  "prevDayAnalysis": {
+    "date": "2026/7/12（当日）",
+    "trackCondForecast": "稍重・小雨（クッション値8.6＝標準）",
+    "summary": "福島は小雨、芝稍重、クッション値8.6の標準的な軟らかさ。決定的なのは同日の福島3R（同じ芝2000m・稍重）の結果で、1着は9番手から4角2番手まで押し上げた馬、2着は7番手、4着10番手、5着は13番手と、中団〜後方から動いた馬が上位を占めた。逃げた馬は3着どまり。前々で粘るタイプには厳しく、中団から早めに動ける持続力型が有利な馬場と読める。この当日バイアスは、七夕賞のJRA-VANデータ「前走4角2〜7番手」条件と完全に整合する。",
+    "races": [
+      {
+        "name": "福島3R（芝2000m・稍重）",
+        "note": "1着9番手→4角2番手 / 2着7番手 / 3着逃げ馬 / 4着10番手 / 5着13番手。中団から動ける馬が優勢、逃げは3着まで"
+      }
+    ],
+    "conditionChange": [
+      {
+        "item": "馬場状態",
+        "good": "中団から4角で押し上げる持続力型",
+        "heavy": "稍重・小雨でパワーが要る。時計は標準"
+      },
+      {
+        "item": "脚質",
+        "good": "好位〜中団で立ち回れる馬（前走4角2-7番手）",
+        "heavy": "逃げ・4角1番手は3着まで。データも【0-0-0-3】"
+      },
+      {
+        "item": "斤量",
+        "good": "今回斤量減で4角2-7番手だった馬（複勝31.6%）",
+        "heavy": "斤量増減なしは【2-3-3-47】複勝14.5%の不振ゾーン"
+      },
+      {
+        "item": "血統",
+        "good": "ルーラーシップ・ゴールドシップの道悪パワー型",
+        "heavy": "軽い切れ味頼みは稍重で削がれる"
+      },
+      {
+        "item": "出走歴",
+        "good": "七夕賞初出走【9-9-10-94】",
+        "heavy": "七夕賞出走歴あり【1-1-0-26】は苦戦"
+      }
+    ],
+    "horseMatrix": [
+      {
+        "name": "センツブラッド",
+        "num": 10,
+        "pop": 0,
+        "frame": "5枠",
+        "style": "先行",
+        "heavy": "◎",
+        "sashi": "◎",
+        "data": "データ完全合致×ルーラーシップ×前走4角2番手",
+        "rank": "S"
+      },
+      {
+        "name": "コントラポスト",
+        "num": 2,
+        "pop": 0,
+        "frame": "1枠",
+        "style": "先行",
+        "heavy": "◎",
+        "sashi": "○",
+        "data": "データ完全合致×重馬場5着実績×京成杯AH3着",
+        "rank": "S"
+      },
+      {
+        "name": "サヴォーナ",
+        "num": 16,
+        "pop": 0,
+        "frame": "8枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "○",
+        "data": "福島民報杯1着のコース実績。58kgとデータ×が課題",
+        "rank": "A"
+      },
+      {
+        "name": "マイネルモーント",
+        "num": 6,
+        "pop": 0,
+        "frame": "3枠",
+        "style": "追込",
+        "heavy": "○",
+        "sashi": "◎",
+        "data": "ゴールドシップ産駒の道悪◎。上がり33.2の決め手",
+        "rank": "A"
+      },
+      {
+        "name": "ヤマニンブークリエ",
+        "num": 15,
+        "pop": 0,
+        "frame": "8枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "横山典弘。斤量増減なしでデータ的に強調不可",
+        "rank": "B"
+      },
+      {
+        "name": "ショウナンマグマ",
+        "num": 3,
+        "pop": 0,
+        "frame": "2枠",
+        "style": "先行",
+        "heavy": "○",
+        "sashi": "△",
+        "data": "データ3条件合致の16番人気。七夕賞出走歴のみ減点",
+        "rank": "B"
+      },
+      {
+        "name": "カラマティアノス",
+        "num": 4,
+        "pop": 0,
+        "frame": "2枠",
+        "style": "先行",
+        "heavy": "△",
+        "sashi": "△",
+        "data": "1番人気だが増減なし×58kg。データの後押しなし",
+        "rank": "C"
+      },
+      {
+        "name": "アスクナイスショー",
+        "num": 11,
+        "pop": 0,
+        "frame": "6枠",
+        "style": "逃げ",
+        "heavy": "▲",
+        "sashi": "▲",
+        "data": "前走4角1番手【0-0-0-3】＋当日は逃げ不利",
+        "rank": "C"
+      },
+      {
+        "name": "バトルボーン",
+        "num": 13,
+        "pop": 0,
+        "frame": "7枠",
+        "style": "逃げ",
+        "heavy": "▲",
+        "sashi": "▲",
+        "data": "前走4角1番手【0-0-0-3】＋当日は逃げ不利",
+        "rank": "C"
+      }
+    ],
+    "pickupHorses": [
+      {
+        "name": "センツブラッド",
+        "num": 10,
+        "pop": 0,
+        "odds": 13.3,
+        "label": "データの本命",
+        "color": "#1e5fa8",
+        "reasons": [
+          "斤量-1kg×前走4角2番手×距離延長＝七夕賞データに完全合致",
+          "ルーラーシップ×ハービンジャーの道悪パワー血統。稍重は歓迎",
+          "当日の福島3Rが示す『中団から動ける馬有利』に脚質が合致",
+          "鳴尾記念2着の地力。前走エプソムC10着は度外視可"
+        ]
+      },
+      {
+        "name": "コントラポスト",
+        "num": 2,
+        "pop": 0,
+        "odds": 17.3,
+        "label": "データの対抗",
+        "color": "#1e5fa8",
+        "reasons": [
+          "斤量-2kg×前走4角3番手×距離延長＝データ完全合致",
+          "ルーラーシップ産駒。中山ディセンバーS（重）5着で道悪実績",
+          "京成杯AH3着・函館巴賞2着の重賞好走歴",
+          "1枠をロスなく立ち回れる"
+        ]
+      },
+      {
+        "name": "マイネルモーント",
+        "num": 6,
+        "pop": 0,
+        "odds": 13.5,
+        "label": "馬場の穴",
+        "color": "#2fa54a",
+        "reasons": [
+          "ゴールドシップ産駒＝道悪の鬼。稍重で一変の余地",
+          "福島民報杯4着で福島2000mの実績",
+          "前走エプソムC上がり33.2の決め手。当日の差し馬場に合致",
+          "データ条件は外れるが馬場が味方"
+        ]
+      },
+      {
+        "name": "ショウナンマグマ",
+        "num": 3,
+        "pop": 0,
+        "odds": 105.6,
+        "label": "大穴",
+        "color": "#c8a84b",
+        "reasons": [
+          "斤量減×前走4角3番手×距離延長のデータ3条件を満たす",
+          "減点は七夕賞出走歴のみ",
+          "16番人気105.6倍の配当妙味"
+        ]
+      }
+    ],
+    "dangerHorses": [
+      {
+        "name": "カラマティアノス",
+        "num": 4,
+        "pop": 0,
+        "odds": 4.5,
+        "note": "1番人気だが斤量増減なし【2-3-3-47】複勝14.5%の不振ゾーン。好条件の「前走1-2番人気」にも該当せず（前走3番人気6着）。58kgトップハンデも重く、データの後押しが一切ない。中山金杯勝ちの地力は認めるが人気ほどの信頼はできない。"
+      },
+      {
+        "name": "アスクナイスショー",
+        "num": 11,
+        "pop": 0,
+        "odds": 5.5,
+        "note": "2番人気。斤量-2kgは魅力だが、前走4角1番手は【0-0-0-3】で全滅データ。今回減の好走は全て「前走4角2〜7番手」に集中する。加えて当日の福島は逃げ馬が3着どまりの馬場。データと馬場のダブル逆風。"
+      },
+      {
+        "name": "バトルボーン",
+        "num": 13,
+        "pop": 0,
+        "odds": 6.6,
+        "note": "3番人気。前走メトロポリタンS3着は評価できるが、4角1番手の逃げ切り型で【0-0-0-3】に該当。当日の馬場も逃げ不利で、押し切りは厳しい。7歳で57kgも楽ではない。"
+      }
+    ],
+    "bettingStrategy": {
+      "axis": "センツブラッド",
+      "axisReason": "データ完全合致×ルーラーシップの道悪血統×当日馬場に脚質合致",
+      "counter": "コントラポスト",
+      "counterReason": "同じくデータ完全合致。重馬場実績と重賞好走歴",
+      "hole": "サヴォーナ",
+      "holeReason": "前走福島民報杯1着のコース実績。58kgとデータ×は割引材料",
+      "bighole": "ショウナンマグマ",
+      "bigholeReason": "データ3条件合致の16番人気。七夕賞出走歴のみが減点"
+    },
+    "impactOnRace": [
+      "🟢 中団から動ける持続力型が有利（福島3Rの実バイアス）→ センツブラッド・コントラポスト",
+      "🟢 斤量減×前走4角2-7番手のデータ該当馬が浮上（複勝31.6%・単回収334円）",
+      "🟢 道悪パワー血統が活きる → ルーラーシップ産駒2頭、ゴールドシップ産駒",
+      "🔴 逃げ・前々は3着まで。前走4角1番手【0-0-0-3】→ アスクナイスショー・バトルボーンは人気でも危険",
+      "🔴 斤量増減なしは複勝14.5%の不振ゾーン → 1番人気カラマティアノスに黄信号",
+      "🔴 好走率最良の「斤量今回増」該当馬がゼロ。今年は波乱の下地"
+    ]
+  }
+}
