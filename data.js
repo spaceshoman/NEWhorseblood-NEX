@@ -33,18 +33,18 @@ window.KB = (function () {
   // 次走（ホームNEXT RACE 用）— 明日(6/21) 2レース同日開催
   const nextRaces = [
     {
-      id: "tanabata2026",
-      grade: "G3",
-      name: "第62回 七夕賞",
-      short: "七夕賞",
-      en: "TANABATA SHO",
-      date: "2026.7.12",
+      id: "roseS2026",
+      grade: "G2",
+      name: "第44回 関西テレビ放送賞ローズステークス",
+      short: "ローズS",
+      en: "ROSE STAKES",
+      date: "2026.9.13",
       dow: "日",
-      venue: "福島",
-      course: "芝2000m",
-      post: "15:45",
-      emoji: "🎋",
-      tagline: "荒れる夏のハンデ重賞",
+      venue: "阪神",
+      course: "芝1800m",
+      post: "15:30",
+      emoji: "🌹",
+      tagline: "秋華賞トライアル・3歳牝馬G2",
       isLive: true,
     },
   ];
@@ -287,7 +287,8 @@ window.KB = (function () {
 
   // 重賞カレンダー（予想ホーム用）
   const calendar = [
-    { id: "tanabata2026", grade: "G3", name: "七夕賞", date: "7.12", dow: "日", venue: "福島", course: "芝2000m", emoji: "🎋", status: "live", note: "荒れる夏のハンデ重賞", field: 16 },
+    { id: "roseS2026", grade: "G2", name: "ローズS", date: "9.13", dow: "日", venue: "阪神", course: "芝1800m", emoji: "🌹", status: "live", note: "秋華賞トライアル・3歳牝馬G2", field: 12 },
+    { id: "tanabata2026", grade: "G3", name: "七夕賞", date: "7.12", dow: "日", venue: "福島", course: "芝2000m", emoji: "🎋", status: "done", note: "荒れる夏のハンデ重賞", field: 16 },
     { id: "kitakyushu2026", grade: "G3", name: "北九州記念", date: "7.5", dow: "日", venue: "小倉", course: "芝1200m", emoji: "⚡", status: "done", note: "夏の短距離ハンデ重賞", field: 13, win: "フリッカージャブ" },
     { id: "hakodateKinen2026", grade: "G3", name: "函館記念", date: "6.28", dow: "日", venue: "函館", course: "芝2000m", emoji: "🐻", status: "done", note: "波乱必至のハンデ重賞", field: 15, win: "ファウストラーゼン" },
     { id: "shirasagiS2026", grade: "G3", name: "しらさぎS", date: "6.21", dow: "日", venue: "阪神", course: "芝1600m", emoji: "🦢", status: "done", note: "サマーマイルシリーズ初戦", field: 18 },
