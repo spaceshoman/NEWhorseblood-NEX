@@ -1,4 +1,7 @@
-const { useState, useEffect, useMemo, useCallback, useRef } = React;
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { SURFACE, DISTANCE, DIST_SHORT, COURSE, GROWTH, TRACK_COND, VENUES } from "./constants.js";
+import { calcAptitude } from "./calcAptitude.js";
+import { load, save } from "./storage.js";
 
 /* ===== Constants ===== */
 
@@ -1294,7 +1297,8 @@ const GRADE_RACES = {
   takarazuka2026:{id:"takarazuka2026",grade:"G1",name:"第67回 宝塚記念",date:"2026/6/14",venue:"阪神",course:"芝2200m",weather:"",trackCond:"",emoji:"🌟",trends:null,result:null,review:null},
   shirasagiS2026:{id:"shirasagiS2026",grade:"G3",name:"第2回 しらさぎステークス",date:"2026/6/21",venue:"阪神",course:"芝1600m",weather:"",trackCond:"",emoji:"🦢",trends:null,result:null,review:null},
   fuchuFillies2026:{id:"fuchuFillies2026",grade:"G3",name:"第74回 府中牝馬ステークス",date:"2026/6/21",venue:"東京",course:"芝1800m",weather:"",trackCond:"",emoji:"🌸",trends:null,result:null,review:null},
-  sprinters2026:{id:"sprinters2026",grade:"G1",name:"第60回 スプリンターズS",date:"2026/10/4",venue:"中山",course:"芝1200m",weather:"",trackCond:"",emoji:"💨",trends:null,result:null,review:null},
+  siriusS2026:{id:"siriusS2026",grade:"G3",name:"第30回 シリウスステークス",date:"2026/9/26",venue:"阪神",course:"ダ2000m",weather:"雨",trackCond:"重",emoji:"⭐",trends:null,result:null,review:null},
+  sprinters2026:{id:"sprinters2026",grade:"G1",name:"第60回 スプリンターズS",date:"2026/9/27",venue:"中山",course:"芝1200m",weather:"曇",trackCond:"重",emoji:"💨",trends:null,result:null,review:null},
   shuka2026:{id:"shuka2026",grade:"G1",name:"第29回 秋華賞",date:"2026/10/18",venue:"京都",course:"芝2000m",weather:"",trackCond:"",emoji:"🍂",trends:null,result:null,review:null},
   kikka2026:{id:"kikka2026",grade:"G1",name:"第87回 菊花賞",date:"2026/10/25",venue:"京都",course:"芝3000m",weather:"",trackCond:"",emoji:"🌻",trends:null,result:null,review:null},
   tennoshoA2026:{id:"tennoshoA2026",grade:"G1",name:"第174回 天皇賞（秋）",date:"2026/11/1",venue:"東京",course:"芝2000m",weather:"",trackCond:"",emoji:"👑",trends:null,result:null,review:null},
@@ -1851,14 +1855,42 @@ const GradeRacePage=({raceId,stallions=[],reviews={}})=>{
               else if(runnerStyle==="追込"){bonus-=3;weaknesses.push("阪神2200m追込×（内回りで届きにくい）");}
             }
 
-            // ⑤c リピーターボーナス（安田記念2026の教訓: ガイアフォースが2年連続2着）
-            // 同レースでの過去好走実績（gradeWinsに同名レースがある場合）
+            // ⑤d 当日馬場バイアス（しらさぎS・府中牝馬S2026の教訓）
+            // レースJSONに trackBias を設定すると、当日の馬場傾向で脚質を補正
+            // "差し有利": 差し・追込+3pt、逃げ・先行-2pt（東京6/21稍重の例）
+            // "先行有利": 逃げ・先行+3pt、差し・追込-2pt（高速・前残りの例）
+            // 未設定時は補正なし（事前予想は従来通りコース形態ベース）
+            const trackBias=race.trackBias||null;
+            if(trackBias==="差し有利"){
+              if(runnerStyle==="差し"||runnerStyle==="追込"){bonus+=3;strengths.push("当日差し有利馬場○");}
+              else if(runnerStyle==="逃げ"||runnerStyle==="先行"){bonus-=2;weaknesses.push("当日差し有利馬場×（前残りにくい）");}
+            } else if(trackBias==="先行有利"){
+              if(runnerStyle==="逃げ"||runnerStyle==="先行"){bonus+=3;strengths.push("当日先行有利馬場○");}
+              else if(runnerStyle==="差し"||runnerStyle==="追込"){bonus-=2;weaknesses.push("当日先行有利馬場×（差し届きにくい）");}
+            }
+
+            // ⑤e 人気馬の苦戦データ（府中牝馬S2026の教訓: 4歳1番人気ヴァルキリーバース14着）
+            // レースJSONに dangerPattern を設定すると該当馬を減点
+            const dp=race.dangerPattern||null;
+            if(dp&&runner.age&&runner.pop){
+              const ageMatch=!dp.age||parseInt(runner.age)===dp.age;
+              const popMatch=!dp.popMax||(runner.pop>0&&runner.pop<=dp.popMax);
+              if(ageMatch&&popMatch){
+                bonus-=(dp.penalty||5);
+                weaknesses.push(dp.label||`危険データ該当（-${dp.penalty||5}pt）`);
+              }
+            }
+
+            // ⑤c リピーターボーナス（府中牝馬S2026の教訓: 前年覇者セキトバイーストの連覇を軽視）
+            // 安田記念ガイアフォース2年連続2着・宝塚メイショウタバル連覇・府中牝馬セキトバイースト連覇と3レース連続でリピーターが好走
+            // 同レースでの過去好走実績（gradeWinsに同名レースがある場合）→ ボーナスを増額
             const raceBaseName=(race.race_name||race.name||"").replace(/第\d+回\s*/,"").replace(/（.*?）/,"");
             if(raceBaseName){
               const repeaterWin=gw.find(w=>w.race&&raceBaseName.includes(w.race.replace(/（.*?）/,"")));
               if(repeaterWin){
-                if(repeaterWin.place===1){bonus+=6;strengths.push(`リピーター◎（${repeaterWin.year}年同レース1着）`);}
-                else if(repeaterWin.place<=3){bonus+=4;strengths.push(`リピーター○（${repeaterWin.year}年同レース${repeaterWin.place}着）`);}
+                if(repeaterWin.place===1){bonus+=9;strengths.push(`リピーター◎（${repeaterWin.year}年同レース1着）`);}
+                else if(repeaterWin.place<=3){bonus+=6;strengths.push(`リピーター○（${repeaterWin.year}年同レース${repeaterWin.place}着）`);}
+                else if(repeaterWin.place<=5){bonus+=3;strengths.push(`リピーター△（${repeaterWin.year}年同レース${repeaterWin.place}着）`);}
               }
             }
 
@@ -2897,7 +2929,7 @@ const BettingCalculator=()=>{
 };
 
 /* ===== Main App ===== */
-function App(){
+export default function App(){
   const[stallions,setStallions]=useState([]);
   const[broodmares,setBroodmares]=useState([]);
   const[dataLoading,setDataLoading]=useState(true);
@@ -2906,7 +2938,7 @@ function App(){
 
   // Fetch JSON data on mount
   useEffect(()=>{
-    const base=(document.querySelector('base')?.getAttribute('href'))||"./";
+    const base=import.meta.env.BASE_URL||"/";
     const fetchJson=async(file)=>{
       const url=base+file;
       console.log("[血統くん] fetching:",url);
@@ -3378,8 +3410,3 @@ function App(){
     </div>
   );
 }
-
-
-/* ブラウザ内Babel運用: マウント */
-const _root = ReactDOM.createRoot(document.getElementById('root'));
-_root.render(<App />);
